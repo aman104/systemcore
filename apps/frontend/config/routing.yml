@@ -1,6 +1,19 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
+user:
+  url: /user
+  param: {module: user, action: index }
+
+email:
+  url: /email
+  param: {module: email, action: index }
+
+mailing_list:
+  url: /mainling_list
+  param: {module: mailing_list, action: index }
+
+
 # default rules
 homepage:
   url:   /

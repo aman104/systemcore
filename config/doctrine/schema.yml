@@ -1,0 +1,95 @@
+actAs: [Timestampable]
+options:
+  type: INNODB
+  collate: utf8_unicode_ci
+  charset: utf8  
+
+User:
+  columns:    
+    username:         {type: string(255), notnull: true, unique: true}
+    api_token:        {type: string(255), notnull: true, unique: true}
+    api_secret: 	  {type: string(255), notnull: true, unique: true}
+    first_name: 	  {type: string(255), notnull: true}
+    last_name:     	  {type: string(255), notnull: true}
+    email:    		  {type: string(255), notnull: true, unique: true}
+    phone:    		  {type: string(255), notnull: false}
+    street:    		  {type: string(255), notnull: false}
+    post_code:  	  {type: string(255), notnull: false}
+    city:       	  {type: string(255), notnull: false}
+    country:          {type: string(255), notnull: false}
+    is_company:       {type: boolean, default: 0}
+    nip:              {type: string(255), notnull: false}
+    status:		  {type: integer, notnull: true, default: 1}
+    invoice_id:		  {type: integer, notnull: false}
+  relations:
+    UserData:
+      type: one
+      foreignType: one
+      local: id
+      foreign: user_id
+    MailingLists:
+      class: MailingList
+      type: many
+      foreignType: one
+      local: id
+      foreign: user_id      
+
+UserData:
+  columns:    
+    user_id:         {type: integer, notnull: true}
+    point:			 {type: integer, notnull: true, default: 500}
+  relations:
+    User:
+      type: one
+      foreignType: one
+      local: user_id
+      foreign: id
+      onDelete: CASCADE   
+
+MailingList:
+  columns:    
+    user_id:         {type: integer, notnull: true}
+    name:			 {type: string(255), notnull: false}
+    hash:			 {type: string(8), notnull: false, unique: true}
+  relations:
+    User:
+      type: one
+      foreignType: many
+      local: user_id
+      foreign: id
+      onDelete: CASCADE
+    Emails:
+      class: MailingList2Email
+      type: many
+      foreignType: many
+      local: id
+      foreign: mainling_list_id
+
+Email:
+  columns: 
+    email: {type: string(255), notnull: true, unique: true}
+  relations:
+    MailingLists:
+      class: MailingList2Email
+      type: many
+      foreignType: many
+      local: id
+      foreign: email_id
+
+MailingList2Email:
+  columns:    
+    mailing_list_id:         {type: integer, notnull: true, primary: true}
+    email_id:    			 {type: integer, notnull: true, primary: true}
+    name:					 {type: string(255), notnull: true}
+    phone:					 {type: string(255), notnull: true}
+    status:					 {type: integer, notnull: true, default: 1}
+  relations:
+    MailingList:
+      type: many
+      local: mailing_list_id
+      foreign: id
+    Email:
+      type: many
+      local: email_id
+      foreign: id
+
