@@ -21,7 +21,7 @@
  * @property integer $status
  * @property integer $invoice_id
  * @property UserData $UserData
- * @property Doctrine_Collection $MailingLists
+ * @property Doctrine_Collection $Mailing
  * 
  * @method string              getUsername()     Returns the current record's "username" value
  * @method string              getApiToken()     Returns the current record's "api_token" value
@@ -40,6 +40,7 @@
  * @method integer             getInvoiceId()    Returns the current record's "invoice_id" value
  * @method UserData            getUserData()     Returns the current record's "UserData" value
  * @method Doctrine_Collection getMailingLists() Returns the current record's "MailingLists" collection
+ * @method Doctrine_Collection getMailing()      Returns the current record's "Mailing" collection
  * @method User                setUsername()     Sets the current record's "username" value
  * @method User                setApiToken()     Sets the current record's "api_token" value
  * @method User                setApiSecret()    Sets the current record's "api_secret" value
@@ -57,6 +58,45 @@
  * @method User                setInvoiceId()    Sets the current record's "invoice_id" value
  * @method User                setUserData()     Sets the current record's "UserData" value
  * @method User                setMailingLists() Sets the current record's "MailingLists" collection
+ * @method User                setMailing()      Sets the current record's "Mailing" collectionLists
+ * @property Doctrine_Collection $Mailing
+ * 
+ * @method string              getUsername()     Returns the current record's "username" value
+ * @method string              getApiToken()     Returns the current record's "api_token" value
+ * @method string              getApiSecret()    Returns the current record's "api_secret" value
+ * @method string              getFirstName()    Returns the current record's "first_name" value
+ * @method string              getLastName()     Returns the current record's "last_name" value
+ * @method string              getEmail()        Returns the current record's "email" value
+ * @method string              getPhone()        Returns the current record's "phone" value
+ * @method string              getStreet()       Returns the current record's "street" value
+ * @method string              getPostCode()     Returns the current record's "post_code" value
+ * @method string              getCity()         Returns the current record's "city" value
+ * @method string              getCountry()      Returns the current record's "country" value
+ * @method boolean             getIsCompany()    Returns the current record's "is_company" value
+ * @method string              getNip()          Returns the current record's "nip" value
+ * @method integer             getStatus()       Returns the current record's "status" value
+ * @method integer             getInvoiceId()    Returns the current record's "invoice_id" value
+ * @method UserData            getUserData()     Returns the current record's "UserData" value
+ * @method Doctrine_Collection getMailingLists() Returns the current record's "MailingLists" collection
+ * @method Doctrine_Collection getMailing()      Returns the current record's "Mailing" collection
+ * @method User                setUsername()     Sets the current record's "username" value
+ * @method User                setApiToken()     Sets the current record's "api_token" value
+ * @method User                setApiSecret()    Sets the current record's "api_secret" value
+ * @method User                setFirstName()    Sets the current record's "first_name" value
+ * @method User                setLastName()     Sets the current record's "last_name" value
+ * @method User                setEmail()        Sets the current record's "email" value
+ * @method User                setPhone()        Sets the current record's "phone" value
+ * @method User                setStreet()       Sets the current record's "street" value
+ * @method User                setPostCode()     Sets the current record's "post_code" value
+ * @method User                setCity()         Sets the current record's "city" value
+ * @method User                setCountry()      Sets the current record's "country" value
+ * @method User                setIsCompany()    Sets the current record's "is_company" value
+ * @method User                setNip()          Sets the current record's "nip" value
+ * @method User                setStatus()       Sets the current record's "status" value
+ * @method User                setInvoiceId()    Sets the current record's "invoice_id" value
+ * @method User                setUserData()     Sets the current record's "UserData" value
+ * @method User                setMailingLists() Sets the current record's "MailingLists" collection
+ * @method User                setMailing()      Sets the current record's "Mailing" collection
  * 
  * @package    SystemCore
  * @subpackage model
@@ -159,6 +199,10 @@ abstract class BaseUser extends sfDoctrineRecord
              'foreign' => 'user_id'));
 
         $this->hasMany('MailingList as MailingLists', array(
+             'local' => 'id',
+             'foreign' => 'user_id'));
+
+        $this->hasMany('Mailing', array(
              'local' => 'id',
              'foreign' => 'user_id'));
 

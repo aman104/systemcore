@@ -33,6 +33,11 @@ User:
       foreignType: one
       local: id
       foreign: user_id      
+    Mailings:
+      type: many
+      foreignType: one
+      local: id
+      foreign: user_id      
 
 UserData:
   columns:    
@@ -92,4 +97,22 @@ MailingList2Email:
       type: many
       local: email_id
       foreign: id
+
+Mailing:
+  columns:
+    user_id:  {type: integer, notnull: true}
+    title:    {type: string(255), notnull: true}
+    html:     {type: text, notnull: false }
+    public:   {type: text, notnull: false }
+    status:   {type: integer, notnull: true, default: 1}
+  relations:
+    User:
+      type: one
+      local: user_id
+      foreign: id    
+
+Config:
+  columns:    
+    record:              {type: string(255), notnull: true, unique: true}
+    value:            {type: text, notnull: true }
 

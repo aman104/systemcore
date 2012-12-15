@@ -17,6 +17,23 @@ class mailing_listActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    $this->forward('default', 'module');
+    try
+    {  
+      if($request->isMethod('post'))          
+      {
+      	echo 'post mailing list';
+      }           
+      if($request->isMethod('put'))          
+      {
+      	echo 'post mailing list';
+      }
+    }
+    catch(Exception $e)
+    {
+      echo $e->getMessage();
+      exit;
+    }
+    return sfView::NONE;
+
   }
 }
