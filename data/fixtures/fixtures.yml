@@ -18,3 +18,11 @@ UserData:
   UserData1:
     User: User1
     point: 5000
+
+MailingList:
+  ML1:
+    User: User1
+    name: "Lista testowa 1"
+  ML2:
+    User: User1
+    name: "Lista testowa 2"

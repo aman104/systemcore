@@ -13,6 +13,18 @@ mailing_list:
   url: /mainling_list
   param: {module: mailing_list, action: index }
 
+add_subscriber:
+  url: /add_subscriber
+  param: {module: tools, action: addSubscriber }
+
+verified:
+  url: /verified
+  param: {module: tools, action: verified }  
+
+remove:
+  url: /remove
+  param: {module: tools, action: remove }    
+
 
 # default rules
 homepage:

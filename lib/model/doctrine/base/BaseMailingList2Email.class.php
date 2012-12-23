@@ -10,23 +10,23 @@
  * @property string $name
  * @property string $phone
  * @property integer $status
- * @property Doctrine_Collection $MailingList
- * @property Doctrine_Collection $Email
+ * @property MailingList $MailingList
+ * @property Email $Email
  * 
- * @method integer             getMailingListId()   Returns the current record's "mailing_list_id" value
- * @method integer             getEmailId()         Returns the current record's "email_id" value
- * @method string              getName()            Returns the current record's "name" value
- * @method string              getPhone()           Returns the current record's "phone" value
- * @method integer             getStatus()          Returns the current record's "status" value
- * @method Doctrine_Collection getMailingList()     Returns the current record's "MailingList" collection
- * @method Doctrine_Collection getEmail()           Returns the current record's "Email" collection
- * @method MailingList2Email   setMailingListId()   Sets the current record's "mailing_list_id" value
- * @method MailingList2Email   setEmailId()         Sets the current record's "email_id" value
- * @method MailingList2Email   setName()            Sets the current record's "name" value
- * @method MailingList2Email   setPhone()           Sets the current record's "phone" value
- * @method MailingList2Email   setStatus()          Sets the current record's "status" value
- * @method MailingList2Email   setMailingList()     Sets the current record's "MailingList" collection
- * @method MailingList2Email   setEmail()           Sets the current record's "Email" collection
+ * @method integer           getMailingListId()   Returns the current record's "mailing_list_id" value
+ * @method integer           getEmailId()         Returns the current record's "email_id" value
+ * @method string            getName()            Returns the current record's "name" value
+ * @method string            getPhone()           Returns the current record's "phone" value
+ * @method integer           getStatus()          Returns the current record's "status" value
+ * @method MailingList       getMailingList()     Returns the current record's "MailingList" value
+ * @method Email             getEmail()           Returns the current record's "Email" value
+ * @method MailingList2Email setMailingListId()   Sets the current record's "mailing_list_id" value
+ * @method MailingList2Email setEmailId()         Sets the current record's "email_id" value
+ * @method MailingList2Email setName()            Sets the current record's "name" value
+ * @method MailingList2Email setPhone()           Sets the current record's "phone" value
+ * @method MailingList2Email setStatus()          Sets the current record's "status" value
+ * @method MailingList2Email setMailingList()     Sets the current record's "MailingList" value
+ * @method MailingList2Email setEmail()           Sets the current record's "Email" value
  * 
  * @package    SystemCore
  * @subpackage model
@@ -70,13 +70,15 @@ abstract class BaseMailingList2Email extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasMany('MailingList', array(
+        $this->hasOne('MailingList', array(
              'local' => 'mailing_list_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'CASCADE'));
 
-        $this->hasMany('Email', array(
+        $this->hasOne('Email', array(
              'local' => 'email_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'CASCADE'));
 
         $timestampable0 = new Doctrine_Template_Timestampable();
         $this->actAs($timestampable0);

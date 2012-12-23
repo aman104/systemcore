@@ -12,4 +12,107 @@
  */
 class MailingList extends BaseMailingList
 {
+
+	public function save(Doctrine_Connection $conn = null)
+	{
+		if($this->isNew())
+		{
+			$this->setHash(Tools::genUniqueHash(8));
+		}
+		parent::save($conn);
+	}
+
+	public function addEmail($params)
+	{
+
+		$email = EmailTable::getInstance()->getOrAddEmail($params['email']);
+
+		$m2E = new MailingList2Email();
+		$m2E->setMailingListId($this->getPrimaryKey());
+		$m2E->setEmailId($email->getPrimaryKey());
+		$m2E->setName(isset($params['name']) ? $params['name'] : '');
+		$m2E->setPhone(isset($params['phone']) ? $params['phone'] : '');
+		$m2E->setStatus($params['status']);
+		$m2E->save();
+
+		if($params['status'] == 1)
+		{
+			EmailTable::sendVerifiedLink($params['email'], $this->getHash(), $m2E->getPrimaryKey());
+		}				
+		
+		return $m2E;
+	}
+
+	public function getEmailsArray()
+	{
+
+		$q = Doctrine_Query::create()
+			->from('MailingList2Email m2e')
+			->leftJoin('m2e.Email e')
+			->where('m2e.mailing_list_id =?', $this->getPrimaryKey())
+			->orderBy('e.email')
+		;
+
+		$array = $q->fetchArray();
+
+		//return $array;
+
+		$return = array();
+		foreach($array as $one)
+		{			
+			$tmp['email'] = $one['Email']['email'];
+			$tmp['name'] = $one['name'];
+			$tmp['phone'] = $one['phone'];
+			$tmp['status'] = $one['status'];
+			$tmp['created_at'] = $one['created_at'];
+			$return[] = $tmp;
+		}
+
+		return $return;
+	}
+
+	public function getIssetEmail($email, $toObject = false)
+	{
+		$q = Doctrine_Query::create()
+			->from('Email e')
+			->leftJoin('e.MailingList2Email m2e')
+			->where('e.email =?', strtolower($email))
+			->andWhere('m2e.mailing_list_id =?', $this->getPrimaryKey())
+		;
+
+		if($toObject)
+		{
+			return $q->fetchOne();
+		}
+
+		$array = $q->fetchOne()->toArray();
+		$return = array();
+		if(count($array) > 0)
+		{
+			$return['email'] = $array['email'];
+			$return['name'] = $array['MailingList2Email'][0]['name'];
+			$return['phone'] = $array['MailingList2Email'][0]['phone'];;
+			$return['status'] = $array['MailingList2Email'][0]['status'];
+			$return['created_at'] = $array['MailingList2Email'][0]['created_at'];
+			$return['updated_at'] = $array['MailingList2Email'][0]['updated_at'];	
+			$return['hash'] = $this->getHash();
+		}
+
+		return $return;
+		
+	}
+
+	public function clear()
+	{
+		$q = Doctrine_Query::create()
+			->from('MailingList2Email m2e')
+			->where('m2e.mailing_list_id =?', $this->getPrimaryKey())
+			->delete();
+		;
+
+		//return $q->getSqlQuery();
+
+		return $q->execute();
+	}
+
 }

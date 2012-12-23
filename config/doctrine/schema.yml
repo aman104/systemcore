@@ -66,9 +66,8 @@ MailingList:
     Emails:
       class: MailingList2Email
       type: many
-      foreignType: many
       local: id
-      foreign: mainling_list_id
+      foreign: email_id
 
 Email:
   columns: 
@@ -77,9 +76,8 @@ Email:
     MailingLists:
       class: MailingList2Email
       type: many
-      foreignType: many
       local: id
-      foreign: email_id
+      foreign: mailing_list_id
 
 MailingList2Email:
   columns:    
@@ -90,13 +88,13 @@ MailingList2Email:
     status:					 {type: integer, notnull: true, default: 1}
   relations:
     MailingList:
-      type: many
       local: mailing_list_id
       foreign: id
+      onDelete: CASCADE
     Email:
-      type: many
       local: email_id
       foreign: id
+      onDelete: CASCADE
 
 Mailing:
   columns:

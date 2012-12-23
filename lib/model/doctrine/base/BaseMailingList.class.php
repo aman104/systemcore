@@ -10,20 +10,20 @@
  * @property string $hash
  * @property User $User
  * @property Doctrine_Collection $Emails
- * @property MailingList2Email $MailingList2Email
+ * @property Doctrine_Collection $MailingList2Email
  * 
  * @method integer             getUserId()            Returns the current record's "user_id" value
  * @method string              getName()              Returns the current record's "name" value
  * @method string              getHash()              Returns the current record's "hash" value
  * @method User                getUser()              Returns the current record's "User" value
  * @method Doctrine_Collection getEmails()            Returns the current record's "Emails" collection
- * @method MailingList2Email   getMailingList2Email() Returns the current record's "MailingList2Email" value
+ * @method Doctrine_Collection getMailingList2Email() Returns the current record's "MailingList2Email" collection
  * @method MailingList         setUserId()            Sets the current record's "user_id" value
  * @method MailingList         setName()              Sets the current record's "name" value
  * @method MailingList         setHash()              Sets the current record's "hash" value
  * @method MailingList         setUser()              Sets the current record's "User" value
  * @method MailingList         setEmails()            Sets the current record's "Emails" collection
- * @method MailingList         setMailingList2Email() Sets the current record's "MailingList2Email" value
+ * @method MailingList         setMailingList2Email() Sets the current record's "MailingList2Email" collection
  * 
  * @package    SystemCore
  * @subpackage model
@@ -66,9 +66,9 @@ abstract class BaseMailingList extends sfDoctrineRecord
 
         $this->hasMany('MailingList2Email as Emails', array(
              'local' => 'id',
-             'foreign' => 'mainling_list_id'));
+             'foreign' => 'email_id'));
 
-        $this->hasOne('MailingList2Email', array(
+        $this->hasMany('MailingList2Email', array(
              'local' => 'id',
              'foreign' => 'mailing_list_id'));
 

@@ -12,4 +12,15 @@
  */
 class Email extends BaseEmail
 {
+
+	public function getEmailDetails($hash)
+	{
+		$q = Doctrine_Query::create()
+			->from('MailingList2Email m2e')
+			->leftJoin('m2e.MailingList ml')
+			->where('m2e.email_id =?', $this->getPrimaryKey())
+			->andWhere('ml.hash =?', $hash);
+		return $q->fetchOne();
+	}
+
 }

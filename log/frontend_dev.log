@@ -1,0 +1,1037 @@
+Dec 23 08:55:28 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /emails with parameters array (  'module' => 'emails',  'action' => 'index',)
+Dec 23 08:55:28 symfony [info] {sfFrontWebController} Action "emails/index" does not exist
+Dec 23 08:55:28 symfony [err] {sfError404Exception} Action "emails/index" does not exist.
+Dec 23 08:55:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Dec 23 08:55:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 08:55:28 symfony [info] {sfWebDebugLogger} Configuration 462.97 ms (5)
+Dec 23 08:55:28 symfony [info] {sfWebDebugLogger} Factories 320.92 ms (1)
+Dec 23 08:55:44 symfony [info] {sfPatternRouting} Match route "email" (/email) for /email with parameters array (  'module' => 'email',  'action' => 'index',)
+Dec 23 08:55:44 symfony [err] {sfWebDebugLogger}  Strict notice at /home/aman/www/sf.pl/systemcore/apps/frontend/modules/email/actions/actions.class.php on line 12 (Declaration of emailActions::PostExecute() should be compatible with that of sfAction::postExecute())
+Dec 23 08:55:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 08:55:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 08:55:44 symfony [info] {emailActions} Call "emailActions->executeIndex()"
+Dec 23 08:55:44 symfony [notice] {sfWebDebugLogger}  Notice at /home/aman/www/sf.pl/systemcore/lib/SM/SmUserAuth.class.php on line 23 (Undefined index: api_token)
+Dec 23 08:57:32 symfony [info] {sfPatternRouting} Match route "email" (/email) for /email with parameters array (  'module' => 'email',  'action' => 'index',)
+Dec 23 08:57:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 08:57:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 08:57:32 symfony [info] {emailActions} Call "emailActions->executeIndex()"
+Dec 23 08:57:32 symfony [notice] {sfWebDebugLogger}  Notice at /home/aman/www/sf.pl/systemcore/lib/SM/SmUserAuth.class.php on line 23 (Undefined index: api_token)
+Dec 23 14:37:53 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:37:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:37:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:37:53 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:37:53 symfony [err] {sfRenderException} The template "addSubscriberSuccess.php" does not exist or is unreadable in "".
+Dec 23 14:37:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Dec 23 14:37:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 14:37:53 symfony [info] {sfWebDebugLogger} Configuration 117.48 ms (9)
+Dec 23 14:37:53 symfony [info] {sfWebDebugLogger} Factories 420.03 ms (1)
+Dec 23 14:37:53 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 0.17 ms (1)
+Dec 23 14:37:53 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 67.23 ms (1)
+Dec 23 14:38:18 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:38:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:38:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:38:18 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:38:18 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 14:38:18 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:38:18 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:38:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 14:38:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 14:38:18 symfony [info] {sfWebDebugLogger} Configuration 2.04 ms (9)
+Dec 23 14:38:18 symfony [info] {sfWebDebugLogger} Factories 45.83 ms (1)
+Dec 23 14:38:18 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 0.38 ms (1)
+Dec 23 14:38:18 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 25.03 ms (1)
+Dec 23 14:38:18 symfony [info] {sfWebResponse} Send content (27490 o)
+Dec 23 14:41:33 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:41:46 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:41:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:41:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:41:46 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:41:46 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 14:41:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (780a27f2)
+Dec 23 14:41:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at, m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM email e LEFT JOIN mailing_list2_email m ON e.id = m.email_id WHERE (e.email = ? AND m.mailing_list_id = ?) - (test@test.pl, 6)
+Dec 23 14:41:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM email e WHERE (e.email = ?) LIMIT 1 - (test@test.pl)
+Dec 23 14:41:46 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO email (email, created_at, updated_at) VALUES (?, ?, ?) - (test@test.pl, 2012-12-23 14:41:46, 2012-12-23 14:41:46)
+Dec 23 14:41:46 symfony [notice] {sfWebDebugLogger}  Notice at /home/aman/www/sf.pl/systemcore/lib/model/doctrine/MailingList.class.php on line 33 (Undefined index: name)
+Dec 23 14:41:46 symfony [notice] {sfWebDebugLogger}  Notice at /home/aman/www/sf.pl/systemcore/lib/model/doctrine/MailingList.class.php on line 34 (Undefined index: phone)
+Dec 23 14:41:46 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO mailing_list2_email (status, mailing_list_id, email_id, name, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?) - (1, 6, 7, , , 2012-12-23 14:41:46, 2012-12-23 14:41:46)
+Dec 23 14:41:46 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 14:41:46 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:41:46 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:41:46 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/lib/model/doctrine/MailingList.class.php:33))
+Dec 23 14:41:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 14:41:46 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/lib/model/doctrine/MailingList.class.php:33))
+Dec 23 14:41:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 14:41:46 symfony [info] {sfWebDebugLogger} Configuration 1.73 ms (9)
+Dec 23 14:41:46 symfony [info] {sfWebDebugLogger} Factories 41.25 ms (1)
+Dec 23 14:41:46 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 590.09 ms (1)
+Dec 23 14:41:46 symfony [info] {sfWebDebugLogger} Database (Doctrine) 219.06 ms (6)
+Dec 23 14:41:46 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 19.50 ms (1)
+Dec 23 14:41:46 symfony [info] {sfWebResponse} Send content (37123 o)
+Dec 23 14:42:04 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:42:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:42:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:42:04 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:42:04 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 14:42:04 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (780a27f2)
+Dec 23 14:42:04 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at, m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM email e LEFT JOIN mailing_list2_email m ON e.id = m.email_id WHERE (e.email = ? AND m.mailing_list_id = ?) - (test@test.pl, 6)
+Dec 23 14:42:04 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 14:42:04 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:42:04 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:42:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 14:42:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 14:42:04 symfony [info] {sfWebDebugLogger} Configuration 1.63 ms (9)
+Dec 23 14:42:04 symfony [info] {sfWebDebugLogger} Factories 34.07 ms (1)
+Dec 23 14:42:04 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 59.79 ms (1)
+Dec 23 14:42:04 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.41 ms (3)
+Dec 23 14:42:04 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 10.59 ms (1)
+Dec 23 14:42:04 symfony [info] {sfWebResponse} Send content (33405 o)
+Dec 23 14:42:34 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:42:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:42:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:42:34 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:42:34 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 14:42:34 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (780a27f2)
+Dec 23 14:42:34 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at, m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM email e LEFT JOIN mailing_list2_email m ON e.id = m.email_id WHERE (e.email = ? AND m.mailing_list_id = ?) - (test@test.pl, 6)
+Dec 23 14:42:34 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 14:42:34 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:42:34 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:42:34 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/actions/actions.class.php:32))
+Dec 23 14:42:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 14:42:34 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/actions/actions.class.php:32))
+Dec 23 14:42:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 14:42:34 symfony [info] {sfWebDebugLogger} Configuration 2.61 ms (9)
+Dec 23 14:42:34 symfony [info] {sfWebDebugLogger} Factories 39.73 ms (1)
+Dec 23 14:42:34 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 62.22 ms (1)
+Dec 23 14:42:34 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.79 ms (3)
+Dec 23 14:42:34 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 17.70 ms (1)
+Dec 23 14:42:34 symfony [info] {sfWebResponse} Send content (33405 o)
+Dec 23 14:43:51 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:43:51 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:43:51 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:43:51 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:43:51 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 14:43:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (780a27f2)
+Dec 23 14:43:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at, m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM email e LEFT JOIN mailing_list2_email m ON e.id = m.email_id WHERE (e.email = ? AND m.mailing_list_id = ?) - (test@test.pl, 6)
+Dec 23 14:43:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at, m2.id AS m2__id, m2.user_id AS m2__user_id, m2.name AS m2__name, m2.hash AS m2__hash, m2.created_at AS m2__created_at, m2.updated_at AS m2__updated_at FROM mailing_list2_email m LEFT JOIN mailing_list m2 ON m.mailing_list_id = m2.id WHERE (m.email_id = ? AND m2.hash = ?) - (7, 780a27f2)
+Dec 23 14:43:51 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM mailing_list2_email WHERE (mailing_list_id = ? AND email_id = ?) - (6, 7)
+Dec 23 14:43:52 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 14:43:52 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:43:52 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:43:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 14:43:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 14:43:52 symfony [info] {sfWebDebugLogger} Configuration 1.76 ms (9)
+Dec 23 14:43:52 symfony [info] {sfWebDebugLogger} Factories 37.04 ms (1)
+Dec 23 14:43:52 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 385.86 ms (1)
+Dec 23 14:43:52 symfony [info] {sfWebDebugLogger} Database (Doctrine) 71.27 ms (5)
+Dec 23 14:43:52 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 11.36 ms (1)
+Dec 23 14:43:52 symfony [info] {sfWebResponse} Send content (37227 o)
+Dec 23 14:43:58 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:43:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:43:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:43:58 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:43:58 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 14:43:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (780a27f2)
+Dec 23 14:43:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at, m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM email e LEFT JOIN mailing_list2_email m ON e.id = m.email_id WHERE (e.email = ? AND m.mailing_list_id = ?) - (test@test.pl, 6)
+Dec 23 14:43:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM email e WHERE (e.email = ?) LIMIT 1 - (test@test.pl)
+Dec 23 14:43:58 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO mailing_list2_email (status, mailing_list_id, email_id, name, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?) - (1, 6, 7, , , 2012-12-23 14:43:58, 2012-12-23 14:43:58)
+Dec 23 14:43:59 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 14:43:59 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:43:59 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:43:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 14:43:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 14:43:59 symfony [info] {sfWebDebugLogger} Configuration 1.81 ms (9)
+Dec 23 14:43:59 symfony [info] {sfWebDebugLogger} Factories 38.25 ms (1)
+Dec 23 14:43:59 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 238.89 ms (1)
+Dec 23 14:43:59 symfony [info] {sfWebDebugLogger} Database (Doctrine) 47.45 ms (5)
+Dec 23 14:43:59 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 12.38 ms (1)
+Dec 23 14:43:59 symfony [info] {sfWebResponse} Send content (36082 o)
+Dec 23 14:46:43 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:46:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:46:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:46:43 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:46:43 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 14:46:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (780a27f2)
+Dec 23 14:46:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at, m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM email e LEFT JOIN mailing_list2_email m ON e.id = m.email_id WHERE (e.email = ? AND m.mailing_list_id = ?) - (test@test.pl, 6)
+Dec 23 14:46:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at, m2.id AS m2__id, m2.user_id AS m2__user_id, m2.name AS m2__name, m2.hash AS m2__hash, m2.created_at AS m2__created_at, m2.updated_at AS m2__updated_at FROM mailing_list2_email m LEFT JOIN mailing_list m2 ON m.mailing_list_id = m2.id WHERE (m.email_id = ? AND m2.hash = ?) - (7, 780a27f2)
+Dec 23 14:46:43 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM mailing_list2_email WHERE (mailing_list_id = ? AND email_id = ?) - (6, 7)
+Dec 23 14:46:43 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 14:47:00 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:47:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:47:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:47:00 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:47:00 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 14:47:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (780a27f2)
+Dec 23 14:47:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at, m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM email e LEFT JOIN mailing_list2_email m ON e.id = m.email_id WHERE (e.email = ? AND m.mailing_list_id = ?) - (test@test.pl, 6)
+Dec 23 14:47:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM email e WHERE (e.email = ?) LIMIT 1 - (test@test.pl)
+Dec 23 14:47:00 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO mailing_list2_email (status, mailing_list_id, email_id, name, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?) - (1, 6, 7, , , 2012-12-23 14:47:00, 2012-12-23 14:47:00)
+Dec 23 14:47:00 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 14:47:00 symfony [notice] {sfWebDebugLogger}  Notice at /home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php on line 5 (Undefined variable: delete)
+Dec 23 14:47:00 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:47:00 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:47:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 14:47:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 14:47:00 symfony [info] {sfWebDebugLogger} Configuration 1.91 ms (9)
+Dec 23 14:47:00 symfony [info] {sfWebDebugLogger} Factories 35.07 ms (1)
+Dec 23 14:47:00 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 245.06 ms (1)
+Dec 23 14:47:00 symfony [info] {sfWebDebugLogger} Database (Doctrine) 21.80 ms (5)
+Dec 23 14:47:00 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 11.92 ms (1)
+Dec 23 14:47:00 symfony [info] {sfWebResponse} Send content (36449 o)
+Dec 23 14:47:31 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:47:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:47:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:47:31 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:47:31 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 14:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (780a27f2)
+Dec 23 14:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at, m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM email e LEFT JOIN mailing_list2_email m ON e.id = m.email_id WHERE (e.email = ? AND m.mailing_list_id = ?) - (test@test.pl, 6)
+Dec 23 14:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at, m2.id AS m2__id, m2.user_id AS m2__user_id, m2.name AS m2__name, m2.hash AS m2__hash, m2.created_at AS m2__created_at, m2.updated_at AS m2__updated_at FROM mailing_list2_email m LEFT JOIN mailing_list m2 ON m.mailing_list_id = m2.id WHERE (m.email_id = ? AND m2.hash = ?) - (7, 780a27f2)
+Dec 23 14:47:31 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM mailing_list2_email WHERE (mailing_list_id = ? AND email_id = ?) - (6, 7)
+Dec 23 14:47:31 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 14:47:31 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:47:31 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:47:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 14:47:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 14:47:31 symfony [info] {sfWebDebugLogger} Configuration 1.84 ms (9)
+Dec 23 14:47:31 symfony [info] {sfWebDebugLogger} Factories 36.40 ms (1)
+Dec 23 14:47:31 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 239.13 ms (1)
+Dec 23 14:47:31 symfony [info] {sfWebDebugLogger} Database (Doctrine) 2.68 ms (5)
+Dec 23 14:47:31 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 12.57 ms (1)
+Dec 23 14:47:31 symfony [info] {sfWebResponse} Send content (37422 o)
+Dec 23 14:47:35 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:47:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:47:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:47:35 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:47:35 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 14:47:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (780a27f2)
+Dec 23 14:47:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at, m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM email e LEFT JOIN mailing_list2_email m ON e.id = m.email_id WHERE (e.email = ? AND m.mailing_list_id = ?) - (test@test.pl, 6)
+Dec 23 14:47:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM email e WHERE (e.email = ?) LIMIT 1 - (test@test.pl)
+Dec 23 14:47:35 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO mailing_list2_email (status, mailing_list_id, email_id, name, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?) - (1, 6, 7, , , 2012-12-23 14:47:35, 2012-12-23 14:47:35)
+Dec 23 14:47:35 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 14:47:35 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:47:35 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:47:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 14:47:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 14:47:35 symfony [info] {sfWebDebugLogger} Configuration 1.70 ms (9)
+Dec 23 14:47:35 symfony [info] {sfWebDebugLogger} Factories 36.66 ms (1)
+Dec 23 14:47:35 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 201.00 ms (1)
+Dec 23 14:47:35 symfony [info] {sfWebDebugLogger} Database (Doctrine) 2.12 ms (5)
+Dec 23 14:47:35 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 10.77 ms (1)
+Dec 23 14:47:35 symfony [info] {sfWebResponse} Send content (36270 o)
+Dec 23 14:47:36 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:47:36 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:47:36 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:47:36 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:47:36 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 14:47:36 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (780a27f2)
+Dec 23 14:47:36 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at, m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM email e LEFT JOIN mailing_list2_email m ON e.id = m.email_id WHERE (e.email = ? AND m.mailing_list_id = ?) - (test@test.pl, 6)
+Dec 23 14:47:36 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at, m2.id AS m2__id, m2.user_id AS m2__user_id, m2.name AS m2__name, m2.hash AS m2__hash, m2.created_at AS m2__created_at, m2.updated_at AS m2__updated_at FROM mailing_list2_email m LEFT JOIN mailing_list m2 ON m.mailing_list_id = m2.id WHERE (m.email_id = ? AND m2.hash = ?) - (7, 780a27f2)
+Dec 23 14:47:36 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM mailing_list2_email WHERE (mailing_list_id = ? AND email_id = ?) - (6, 7)
+Dec 23 14:47:36 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 14:47:36 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:47:36 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:47:36 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 14:47:36 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 14:47:36 symfony [info] {sfWebDebugLogger} Configuration 1.68 ms (9)
+Dec 23 14:47:36 symfony [info] {sfWebDebugLogger} Factories 33.60 ms (1)
+Dec 23 14:47:36 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 320.25 ms (1)
+Dec 23 14:47:36 symfony [info] {sfWebDebugLogger} Database (Doctrine) 26.33 ms (5)
+Dec 23 14:47:36 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 11.51 ms (1)
+Dec 23 14:47:36 symfony [info] {sfWebResponse} Send content (37422 o)
+Dec 23 14:49:18 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:49:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:49:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:49:18 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:49:18 symfony [err] {Doctrine_Table_Exception} You must specify the value to findOneBy
+Dec 23 14:49:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Dec 23 14:49:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 14:49:18 symfony [info] {sfWebDebugLogger} Configuration 1.47 ms (8)
+Dec 23 14:49:18 symfony [info] {sfWebDebugLogger} Factories 40.29 ms (1)
+Dec 23 14:49:18 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 76.12 ms (1)
+Dec 23 14:49:33 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:49:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:49:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:49:33 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:49:33 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 14:49:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215)
+Dec 23 14:49:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at, m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM email e LEFT JOIN mailing_list2_email m ON e.id = m.email_id WHERE (e.email = ? AND m.mailing_list_id = ?) - (asdf@asdf.pl, 4)
+Dec 23 14:49:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM email e WHERE (e.email = ?) LIMIT 1 - (asdf@asdf.pl)
+Dec 23 14:49:33 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO email (email, created_at, updated_at) VALUES (?, ?, ?) - (asdf@asdf.pl, 2012-12-23 14:49:33, 2012-12-23 14:49:33)
+Dec 23 14:49:33 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO mailing_list2_email (status, mailing_list_id, email_id, name, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?) - (1, 4, 8, , , 2012-12-23 14:49:33, 2012-12-23 14:49:33)
+Dec 23 14:49:33 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 14:49:33 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:49:33 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:49:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 14:49:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 14:49:33 symfony [info] {sfWebDebugLogger} Configuration 1.78 ms (9)
+Dec 23 14:49:33 symfony [info] {sfWebDebugLogger} Factories 45.61 ms (1)
+Dec 23 14:49:33 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 292.68 ms (1)
+Dec 23 14:49:33 symfony [info] {sfWebDebugLogger} Database (Doctrine) 3.25 ms (6)
+Dec 23 14:49:33 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 12.42 ms (1)
+Dec 23 14:49:33 symfony [info] {sfWebResponse} Send content (37623 o)
+Dec 23 14:50:38 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:50:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:50:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:50:38 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:50:38 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 14:50:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215)
+Dec 23 14:50:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at, m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM email e LEFT JOIN mailing_list2_email m ON e.id = m.email_id WHERE (e.email = ? AND m.mailing_list_id = ?) - (asdf@asdf.pl, 4)
+Dec 23 14:50:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at, m2.id AS m2__id, m2.user_id AS m2__user_id, m2.name AS m2__name, m2.hash AS m2__hash, m2.created_at AS m2__created_at, m2.updated_at AS m2__updated_at FROM mailing_list2_email m LEFT JOIN mailing_list m2 ON m.mailing_list_id = m2.id WHERE (m.email_id = ? AND m2.hash = ?) - (8, eb75a215)
+Dec 23 14:50:38 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM mailing_list2_email WHERE (mailing_list_id = ? AND email_id = ?) - (4, 8)
+Dec 23 14:50:38 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 14:50:38 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:50:38 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:50:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 14:50:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 14:50:38 symfony [info] {sfWebDebugLogger} Configuration 1.64 ms (9)
+Dec 23 14:50:38 symfony [info] {sfWebDebugLogger} Factories 37.04 ms (1)
+Dec 23 14:50:38 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 192.23 ms (1)
+Dec 23 14:50:38 symfony [info] {sfWebDebugLogger} Database (Doctrine) 12.24 ms (5)
+Dec 23 14:50:38 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 10.98 ms (1)
+Dec 23 14:50:38 symfony [info] {sfWebResponse} Send content (37799 o)
+Dec 23 14:51:01 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:51:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:51:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:51:01 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:51:01 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 14:51:01 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215)
+Dec 23 14:51:01 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at, m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM email e LEFT JOIN mailing_list2_email m ON e.id = m.email_id WHERE (e.email = ? AND m.mailing_list_id = ?) - (asdf@asdf.pl, 4)
+Dec 23 14:51:01 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM email e WHERE (e.email = ?) LIMIT 1 - (asdf@asdf.pl)
+Dec 23 14:51:01 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO mailing_list2_email (status, mailing_list_id, email_id, name, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?) - (1, 4, 8, , , 2012-12-23 14:51:01, 2012-12-23 14:51:01)
+Dec 23 14:51:01 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 14:51:01 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:51:01 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:51:01 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/actions/actions.class.php:19))
+Dec 23 14:51:01 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 14:51:01 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/actions/actions.class.php:19))
+Dec 23 14:51:01 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 14:51:01 symfony [info] {sfWebDebugLogger} Configuration 1.64 ms (9)
+Dec 23 14:51:01 symfony [info] {sfWebDebugLogger} Factories 36.62 ms (1)
+Dec 23 14:51:01 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 177.11 ms (1)
+Dec 23 14:51:01 symfony [info] {sfWebDebugLogger} Database (Doctrine) 21.03 ms (5)
+Dec 23 14:51:01 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 14.91 ms (1)
+Dec 23 14:51:01 symfony [info] {sfWebResponse} Send content (36647 o)
+Dec 23 14:52:19 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:52:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:52:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:52:19 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:52:19 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 14:52:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215)
+Dec 23 14:52:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at, m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM email e LEFT JOIN mailing_list2_email m ON e.id = m.email_id WHERE (e.email = ? AND m.mailing_list_id = ?) - (asdf@asdf.pl, 4)
+Dec 23 14:52:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at, m2.id AS m2__id, m2.user_id AS m2__user_id, m2.name AS m2__name, m2.hash AS m2__hash, m2.created_at AS m2__created_at, m2.updated_at AS m2__updated_at FROM mailing_list2_email m LEFT JOIN mailing_list m2 ON m.mailing_list_id = m2.id WHERE (m.email_id = ? AND m2.hash = ?) - (8, eb75a215)
+Dec 23 14:52:19 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM mailing_list2_email WHERE (mailing_list_id = ? AND email_id = ?) - (4, 8)
+Dec 23 14:52:19 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 14:52:19 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:52:19 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:52:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 14:52:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 14:52:19 symfony [info] {sfWebDebugLogger} Configuration 1.66 ms (9)
+Dec 23 14:52:19 symfony [info] {sfWebDebugLogger} Factories 35.75 ms (1)
+Dec 23 14:52:19 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 193.19 ms (1)
+Dec 23 14:52:19 symfony [info] {sfWebDebugLogger} Database (Doctrine) 20.78 ms (5)
+Dec 23 14:52:19 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 10.77 ms (1)
+Dec 23 14:52:19 symfony [info] {sfWebResponse} Send content (38052 o)
+Dec 23 14:52:26 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:52:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:52:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:52:26 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:52:26 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 14:52:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215)
+Dec 23 14:52:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at, m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM email e LEFT JOIN mailing_list2_email m ON e.id = m.email_id WHERE (e.email = ? AND m.mailing_list_id = ?) - (asdf@asdf.pl, 4)
+Dec 23 14:52:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM email e WHERE (e.email = ?) LIMIT 1 - (asdf@asdf.pl)
+Dec 23 14:52:26 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO mailing_list2_email (status, mailing_list_id, email_id, name, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?) - (1, 4, 8, , , 2012-12-23 14:52:26, 2012-12-23 14:52:26)
+Dec 23 14:52:26 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 14:52:26 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:52:26 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:52:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 14:52:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 14:52:26 symfony [info] {sfWebDebugLogger} Configuration 1.65 ms (9)
+Dec 23 14:52:26 symfony [info] {sfWebDebugLogger} Factories 38.14 ms (1)
+Dec 23 14:52:26 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 164.94 ms (1)
+Dec 23 14:52:26 symfony [info] {sfWebDebugLogger} Database (Doctrine) 12.38 ms (5)
+Dec 23 14:52:26 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 11.16 ms (1)
+Dec 23 14:52:26 symfony [info] {sfWebResponse} Send content (36900 o)
+Dec 23 14:53:21 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:53:21 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:53:21 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:53:21 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:53:21 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 14:53:21 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215)
+Dec 23 14:53:21 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at, m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM email e LEFT JOIN mailing_list2_email m ON e.id = m.email_id WHERE (e.email = ? AND m.mailing_list_id = ?) - (asdf, 4)
+Dec 23 14:53:21 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM email e WHERE (e.email = ?) LIMIT 1 - (asdf)
+Dec 23 14:53:21 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO email (email, created_at, updated_at) VALUES (?, ?, ?) - (asdf, 2012-12-23 14:53:21, 2012-12-23 14:53:21)
+Dec 23 14:53:21 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO mailing_list2_email (status, mailing_list_id, email_id, name, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?) - (1, 4, 9, , , 2012-12-23 14:53:21, 2012-12-23 14:53:21)
+Dec 23 14:53:21 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 14:53:22 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:53:22 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:53:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 14:53:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 14:53:22 symfony [info] {sfWebDebugLogger} Configuration 2.06 ms (9)
+Dec 23 14:53:22 symfony [info] {sfWebDebugLogger} Factories 152.41 ms (1)
+Dec 23 14:53:22 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 239.02 ms (1)
+Dec 23 14:53:22 symfony [info] {sfWebDebugLogger} Database (Doctrine) 14.62 ms (6)
+Dec 23 14:53:22 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 12.07 ms (1)
+Dec 23 14:53:22 symfony [info] {sfWebResponse} Send content (38003 o)
+Dec 23 14:53:40 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:53:40 symfony [notice] {sfWebDebugLogger}  Notice at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/storage/sfSessionStorage.class.php on line 93 (session_start() [<a href='function.session-start'>function.session-start</a>]: ps_files_cleanup_dir: opendir(/var/lib/php5) failed: Permission denied (13))
+Dec 23 14:53:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:53:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:53:40 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:53:40 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 14:53:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215)
+Dec 23 14:53:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at, m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM email e LEFT JOIN mailing_list2_email m ON e.id = m.email_id WHERE (e.email = ? AND m.mailing_list_id = ?) - (asdf@asdf.pl, 4)
+Dec 23 14:53:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at, m2.id AS m2__id, m2.user_id AS m2__user_id, m2.name AS m2__name, m2.hash AS m2__hash, m2.created_at AS m2__created_at, m2.updated_at AS m2__updated_at FROM mailing_list2_email m LEFT JOIN mailing_list m2 ON m.mailing_list_id = m2.id WHERE (m.email_id = ? AND m2.hash = ?) - (8, eb75a215)
+Dec 23 14:53:40 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM mailing_list2_email WHERE (mailing_list_id = ? AND email_id = ?) - (4, 8)
+Dec 23 14:53:40 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 14:53:40 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:53:40 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:53:40 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/storage/sfSessionStorage.class.php:93))
+Dec 23 14:53:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 14:53:40 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/storage/sfSessionStorage.class.php:93))
+Dec 23 14:53:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 14:53:40 symfony [info] {sfWebDebugLogger} Configuration 1.59 ms (9)
+Dec 23 14:53:40 symfony [info] {sfWebDebugLogger} Factories 41.95 ms (1)
+Dec 23 14:53:40 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 248.41 ms (1)
+Dec 23 14:53:40 symfony [info] {sfWebDebugLogger} Database (Doctrine) 21.65 ms (5)
+Dec 23 14:53:40 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 12.52 ms (1)
+Dec 23 14:53:40 symfony [info] {sfWebResponse} Send content (38204 o)
+Dec 23 14:53:46 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:53:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:53:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:53:46 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:53:46 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 14:53:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215)
+Dec 23 14:53:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at, m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM email e LEFT JOIN mailing_list2_email m ON e.id = m.email_id WHERE (e.email = ? AND m.mailing_list_id = ?) - (asdf@asdf.pl, 4)
+Dec 23 14:53:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM email e WHERE (e.email = ?) LIMIT 1 - (asdf@asdf.pl)
+Dec 23 14:53:46 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO mailing_list2_email (status, mailing_list_id, email_id, name, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?) - (1, 4, 8, , , 2012-12-23 14:53:46, 2012-12-23 14:53:46)
+Dec 23 14:53:46 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 14:53:46 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:53:46 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:53:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 14:53:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 14:53:46 symfony [info] {sfWebDebugLogger} Configuration 1.65 ms (9)
+Dec 23 14:53:46 symfony [info] {sfWebDebugLogger} Factories 36.22 ms (1)
+Dec 23 14:53:46 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 156.81 ms (1)
+Dec 23 14:53:46 symfony [info] {sfWebDebugLogger} Database (Doctrine) 16.47 ms (5)
+Dec 23 14:53:46 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 12.80 ms (1)
+Dec 23 14:53:46 symfony [info] {sfWebResponse} Send content (37051 o)
+Dec 23 14:54:06 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:54:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:54:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:54:06 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:54:06 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 14:54:06 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215)
+Dec 23 14:54:06 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at, m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM email e LEFT JOIN mailing_list2_email m ON e.id = m.email_id WHERE (e.email = ? AND m.mailing_list_id = ?) - (asdfasdf@asdf.pl, 4)
+Dec 23 14:54:06 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM email e WHERE (e.email = ?) LIMIT 1 - (asdfasdf@asdf.pl)
+Dec 23 14:54:06 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO email (email, created_at, updated_at) VALUES (?, ?, ?) - (asdfasdf@asdf.pl, 2012-12-23 14:54:06, 2012-12-23 14:54:06)
+Dec 23 14:54:06 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO mailing_list2_email (status, mailing_list_id, email_id, name, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?) - (1, 4, 10, , , 2012-12-23 14:54:06, 2012-12-23 14:54:06)
+Dec 23 14:54:06 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 14:54:06 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:54:06 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:54:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 14:54:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 14:54:06 symfony [info] {sfWebDebugLogger} Configuration 1.65 ms (9)
+Dec 23 14:54:06 symfony [info] {sfWebDebugLogger} Factories 36.97 ms (1)
+Dec 23 14:54:06 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 191.38 ms (1)
+Dec 23 14:54:06 symfony [info] {sfWebDebugLogger} Database (Doctrine) 36.71 ms (6)
+Dec 23 14:54:06 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 13.51 ms (1)
+Dec 23 14:54:06 symfony [info] {sfWebResponse} Send content (38149 o)
+Dec 23 14:57:28 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:57:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:57:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:57:28 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:57:28 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 14:57:28 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:57:28 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:57:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 14:57:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 14:57:28 symfony [info] {sfWebDebugLogger} Configuration 179.77 ms (9)
+Dec 23 14:57:28 symfony [info] {sfWebDebugLogger} Factories 76.12 ms (1)
+Dec 23 14:57:28 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 25.67 ms (1)
+Dec 23 14:57:28 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 94.37 ms (1)
+Dec 23 14:57:28 symfony [info] {sfWebResponse} Send content (28484 o)
+Dec 23 14:57:54 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:57:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:57:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:57:54 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:57:54 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 14:57:54 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:57:54 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:57:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 14:57:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 14:57:54 symfony [info] {sfWebDebugLogger} Configuration 1.58 ms (9)
+Dec 23 14:57:54 symfony [info] {sfWebDebugLogger} Factories 35.61 ms (1)
+Dec 23 14:57:54 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 0.37 ms (1)
+Dec 23 14:57:54 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 11.00 ms (1)
+Dec 23 14:57:54 symfony [info] {sfWebResponse} Send content (28479 o)
+Dec 23 14:58:04 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:58:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:58:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:58:04 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:58:04 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 14:58:04 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215)
+Dec 23 14:58:04 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at, m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM email e LEFT JOIN mailing_list2_email m ON e.id = m.email_id WHERE (e.email = ? AND m.mailing_list_id = ?) - (asdfas@asdf.pl, 4)
+Dec 23 14:58:04 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM email e WHERE (e.email = ?) LIMIT 1 - (asdfas@asdf.pl)
+Dec 23 14:58:04 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO email (email, created_at, updated_at) VALUES (?, ?, ?) - (asdfas@asdf.pl, 2012-12-23 14:58:04, 2012-12-23 14:58:04)
+Dec 23 14:58:04 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO mailing_list2_email (status, mailing_list_id, email_id, name, phone, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?) - (1, 4, 11, , , 2012-12-23 14:58:04, 2012-12-23 14:58:04)
+Dec 23 14:58:05 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 14:58:05 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:58:05 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:58:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 14:58:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 14:58:05 symfony [info] {sfWebDebugLogger} Configuration 1.79 ms (9)
+Dec 23 14:58:05 symfony [info] {sfWebDebugLogger} Factories 36.02 ms (1)
+Dec 23 14:58:05 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 332.66 ms (1)
+Dec 23 14:58:05 symfony [info] {sfWebDebugLogger} Database (Doctrine) 60.21 ms (6)
+Dec 23 14:58:05 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 11.64 ms (1)
+Dec 23 14:58:05 symfony [info] {sfWebResponse} Send content (38134 o)
+Dec 23 14:59:56 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 14:59:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 14:59:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 14:59:56 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 14:59:57 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 14:59:57 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215)
+Dec 23 14:59:57 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at, m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM email e LEFT JOIN mailing_list2_email m ON e.id = m.email_id WHERE (e.email = ? AND m.mailing_list_id = ?) - (asdf@asdf.pl, 4)
+Dec 23 14:59:57 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at, m2.id AS m2__id, m2.user_id AS m2__user_id, m2.name AS m2__name, m2.hash AS m2__hash, m2.created_at AS m2__created_at, m2.updated_at AS m2__updated_at FROM mailing_list2_email m LEFT JOIN mailing_list m2 ON m.mailing_list_id = m2.id WHERE (m.email_id = ? AND m2.hash = ?) - (8, eb75a215)
+Dec 23 14:59:57 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM mailing_list2_email WHERE (mailing_list_id = ? AND email_id = ?) - (4, 8)
+Dec 23 14:59:57 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 14:59:57 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:59:57 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 14:59:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 14:59:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 14:59:57 symfony [info] {sfWebDebugLogger} Configuration 1.59 ms (9)
+Dec 23 14:59:57 symfony [info] {sfWebDebugLogger} Factories 36.03 ms (1)
+Dec 23 14:59:57 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 187.28 ms (1)
+Dec 23 14:59:57 symfony [info] {sfWebDebugLogger} Database (Doctrine) 36.71 ms (5)
+Dec 23 14:59:57 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 12.00 ms (1)
+Dec 23 14:59:57 symfony [info] {sfWebResponse} Send content (38230 o)
+Dec 23 15:23:38 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 15:23:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:23:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:23:38 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 15:23:53 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 15:23:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:23:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:23:53 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 15:24:02 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 15:24:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:24:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:24:02 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 15:24:03 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 15:24:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:24:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:24:03 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 15:24:42 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 15:24:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:24:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:24:42 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 15:28:49 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 15:28:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:28:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:28:49 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 15:28:49 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 15:28:49 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:28:49 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:28:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 15:28:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:28:49 symfony [info] {sfWebDebugLogger} Configuration 13.49 ms (10)
+Dec 23 15:28:49 symfony [info] {sfWebDebugLogger} Factories 35.65 ms (1)
+Dec 23 15:28:49 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 0.23 ms (1)
+Dec 23 15:28:49 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 57.41 ms (1)
+Dec 23 15:28:49 symfony [info] {sfWebResponse} Send content (28159 o)
+Dec 23 15:28:55 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 15:28:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:28:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:28:55 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 15:28:55 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 15:28:55 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:28:55 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:28:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 15:28:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:28:55 symfony [info] {sfWebDebugLogger} Configuration 1.63 ms (9)
+Dec 23 15:28:55 symfony [info] {sfWebDebugLogger} Factories 39.51 ms (1)
+Dec 23 15:28:55 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 0.29 ms (1)
+Dec 23 15:28:55 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 13.06 ms (1)
+Dec 23 15:28:55 symfony [info] {sfWebResponse} Send content (28351 o)
+Dec 23 15:29:00 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 15:29:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:29:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:29:00 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 15:29:00 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 15:29:00 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:29:00 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:29:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 15:29:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:29:00 symfony [info] {sfWebDebugLogger} Configuration 1.59 ms (9)
+Dec 23 15:29:00 symfony [info] {sfWebDebugLogger} Factories 34.06 ms (1)
+Dec 23 15:29:00 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 0.25 ms (1)
+Dec 23 15:29:00 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 11.75 ms (1)
+Dec 23 15:29:00 symfony [info] {sfWebResponse} Send content (28350 o)
+Dec 23 15:29:05 symfony [info] {sfPatternRouting} Match route "add_subscriber" (/add_subscriber) for /add_subscriber with parameters array (  'module' => 'tools',  'action' => 'addSubscriber',)
+Dec 23 15:29:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:29:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:29:05 symfony [info] {toolsActions} Call "toolsActions->executeAddSubscriber()"
+Dec 23 15:29:05 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/addSubscriberSuccess.php"
+Dec 23 15:29:05 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:29:05 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:29:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 15:29:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:29:05 symfony [info] {sfWebDebugLogger} Configuration 1.65 ms (9)
+Dec 23 15:29:05 symfony [info] {sfWebDebugLogger} Factories 36.08 ms (1)
+Dec 23 15:29:05 symfony [info] {sfWebDebugLogger} Action "tools/addSubscriber" 0.24 ms (1)
+Dec 23 15:29:05 symfony [info] {sfWebDebugLogger} View "Success" for "tools/addSubscriber" 11.04 ms (1)
+Dec 23 15:29:05 symfony [info] {sfWebResponse} Send content (28350 o)
+Dec 23 15:29:57 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /verified/eb75a215/f3e0987192512702bccd2914aa2663a5/ with parameters array (  'module' => 'verified',  'action' => 'eb75a215',  'f3e0987192512702bccd2914aa2663a5' => '',)
+Dec 23 15:29:57 symfony [info] {sfFrontWebController} Action "verified/eb75a215" does not exist
+Dec 23 15:29:57 symfony [err] {sfError404Exception} Action "verified/eb75a215" does not exist.
+Dec 23 15:29:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Dec 23 15:29:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:29:57 symfony [info] {sfWebDebugLogger} Configuration 1.06 ms (5)
+Dec 23 15:29:57 symfony [info] {sfWebDebugLogger} Factories 46.28 ms (1)
+Dec 23 15:35:27 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /verified/eb75a215/f3e0987192512702bccd2914aa2663a5/ with parameters array (  'module' => 'verified',  'action' => 'eb75a215',  'f3e0987192512702bccd2914aa2663a5' => '',)
+Dec 23 15:35:27 symfony [info] {sfFrontWebController} Action "verified/eb75a215" does not exist
+Dec 23 15:35:27 symfony [err] {sfError404Exception} Action "verified/eb75a215" does not exist.
+Dec 23 15:35:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Dec 23 15:35:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:35:27 symfony [info] {sfWebDebugLogger} Configuration 61.67 ms (6)
+Dec 23 15:35:27 symfony [info] {sfWebDebugLogger} Factories 100.61 ms (1)
+Dec 23 15:35:31 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /verified/eb75a215/f3e0987192512702bccd2914aa2663a5/ with parameters array (  'module' => 'verified',  'action' => 'eb75a215',  'f3e0987192512702bccd2914aa2663a5' => '',)
+Dec 23 15:35:31 symfony [info] {sfFrontWebController} Action "verified/eb75a215" does not exist
+Dec 23 15:35:31 symfony [err] {sfError404Exception} Action "verified/eb75a215" does not exist.
+Dec 23 15:35:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Dec 23 15:35:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:35:31 symfony [info] {sfWebDebugLogger} Configuration 1.11 ms (5)
+Dec 23 15:35:31 symfony [info] {sfWebDebugLogger} Factories 38.61 ms (1)
+Dec 23 15:36:06 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /verified/eb75a215/f3e0987192512702bccd2914aa2663a5/ with parameters array (  'module' => 'verified',  'action' => 'eb75a215',  'f3e0987192512702bccd2914aa2663a5' => '',)
+Dec 23 15:36:06 symfony [info] {sfFrontWebController} Action "verified/eb75a215" does not exist
+Dec 23 15:36:06 symfony [err] {sfError404Exception} Action "verified/eb75a215" does not exist.
+Dec 23 15:36:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Dec 23 15:36:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:36:06 symfony [info] {sfWebDebugLogger} Configuration 49.78 ms (6)
+Dec 23 15:36:06 symfony [info] {sfWebDebugLogger} Factories 85.32 ms (1)
+Dec 23 15:36:26 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/verified/" (/).
+Dec 23 15:36:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Dec 23 15:36:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:36:26 symfony [info] {sfWebDebugLogger} Configuration 1.04 ms (5)
+Dec 23 15:36:26 symfony [info] {sfWebDebugLogger} Factories 43.69 ms (1)
+Dec 23 15:36:33 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /verified with parameters array (  'module' => 'verified',  'action' => 'index',)
+Dec 23 15:36:33 symfony [info] {sfFrontWebController} Action "verified/index" does not exist
+Dec 23 15:36:33 symfony [err] {sfError404Exception} Action "verified/index" does not exist.
+Dec 23 15:36:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Dec 23 15:36:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:36:33 symfony [info] {sfWebDebugLogger} Configuration 0.92 ms (5)
+Dec 23 15:36:33 symfony [info] {sfWebDebugLogger} Factories 43.88 ms (1)
+Dec 23 15:36:49 symfony [info] {sfPatternRouting} Match route "verified" (/verified) for /verified with parameters array (  'module' => 'tools',  'action' => 'verified',)
+Dec 23 15:36:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:36:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:36:49 symfony [info] {toolsActions} Call "toolsActions->executeVerified()"
+Dec 23 15:36:49 symfony [err] {sfRenderException} The template "verifiedSuccess.php" does not exist or is unreadable in "".
+Dec 23 15:36:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Dec 23 15:36:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:36:49 symfony [info] {sfWebDebugLogger} Configuration 52.90 ms (10)
+Dec 23 15:36:49 symfony [info] {sfWebDebugLogger} Factories 90.97 ms (1)
+Dec 23 15:36:49 symfony [info] {sfWebDebugLogger} Action "tools/verified" 0.23 ms (1)
+Dec 23 15:36:49 symfony [info] {sfWebDebugLogger} View "Success" for "tools/verified" 59.36 ms (1)
+Dec 23 15:38:22 symfony [info] {sfPatternRouting} Match route "verified" (/verified) for /verified with parameters array (  'module' => 'tools',  'action' => 'verified',)
+Dec 23 15:38:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:38:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:38:22 symfony [info] {toolsActions} Call "toolsActions->executeVerified()"
+Dec 23 15:38:22 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/verifiedSuccess.php"
+Dec 23 15:38:22 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:38:22 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:38:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 15:38:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:38:22 symfony [info] {sfWebDebugLogger} Configuration 1.76 ms (9)
+Dec 23 15:38:22 symfony [info] {sfWebDebugLogger} Factories 41.46 ms (1)
+Dec 23 15:38:22 symfony [info] {sfWebDebugLogger} Action "tools/verified" 0.22 ms (1)
+Dec 23 15:38:22 symfony [info] {sfWebDebugLogger} View "Success" for "tools/verified" 12.00 ms (1)
+Dec 23 15:38:22 symfony [info] {sfWebResponse} Send content (28292 o)
+Dec 23 15:38:26 symfony [info] {sfPatternRouting} Match route "verified" (/verified) for /verified with parameters array (  'module' => 'tools',  'action' => 'verified',)
+Dec 23 15:38:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:38:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:38:26 symfony [info] {toolsActions} Call "toolsActions->executeVerified()"
+Dec 23 15:38:26 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/verifiedSuccess.php"
+Dec 23 15:38:26 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:38:26 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:38:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 15:38:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:38:26 symfony [info] {sfWebDebugLogger} Configuration 1.81 ms (9)
+Dec 23 15:38:26 symfony [info] {sfWebDebugLogger} Factories 36.11 ms (1)
+Dec 23 15:38:26 symfony [info] {sfWebDebugLogger} Action "tools/verified" 0.22 ms (1)
+Dec 23 15:38:26 symfony [info] {sfWebDebugLogger} View "Success" for "tools/verified" 10.07 ms (1)
+Dec 23 15:38:26 symfony [info] {sfWebResponse} Send content (28292 o)
+Dec 23 15:38:43 symfony [info] {sfPatternRouting} Match route "verified" (/verified) for /verified with parameters array (  'module' => 'tools',  'action' => 'verified',)
+Dec 23 15:38:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:38:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:38:43 symfony [info] {toolsActions} Call "toolsActions->executeVerified()"
+Dec 23 15:38:43 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/verifiedSuccess.php"
+Dec 23 15:38:43 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:38:43 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:38:43 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/actions/actions.class.php:72))
+Dec 23 15:38:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 15:38:43 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/actions/actions.class.php:72))
+Dec 23 15:38:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:38:43 symfony [info] {sfWebDebugLogger} Configuration 1.76 ms (9)
+Dec 23 15:38:43 symfony [info] {sfWebDebugLogger} Factories 38.31 ms (1)
+Dec 23 15:38:43 symfony [info] {sfWebDebugLogger} Action "tools/verified" 0.31 ms (1)
+Dec 23 15:38:43 symfony [info] {sfWebDebugLogger} View "Success" for "tools/verified" 14.53 ms (1)
+Dec 23 15:38:43 symfony [info] {sfWebResponse} Send content (28292 o)
+Dec 23 15:38:55 symfony [info] {sfPatternRouting} Match route "verified" (/verified) for /verified with parameters array (  'module' => 'tools',  'action' => 'verified',)
+Dec 23 15:38:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:38:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:38:55 symfony [info] {toolsActions} Call "toolsActions->executeVerified()"
+Dec 23 15:38:55 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/verifiedSuccess.php"
+Dec 23 15:38:55 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:38:55 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:38:55 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/actions/actions.class.php:72))
+Dec 23 15:38:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 15:38:55 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/actions/actions.class.php:72))
+Dec 23 15:38:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:38:55 symfony [info] {sfWebDebugLogger} Configuration 1.89 ms (9)
+Dec 23 15:38:55 symfony [info] {sfWebDebugLogger} Factories 45.74 ms (1)
+Dec 23 15:38:55 symfony [info] {sfWebDebugLogger} Action "tools/verified" 0.38 ms (1)
+Dec 23 15:38:55 symfony [info] {sfWebDebugLogger} View "Success" for "tools/verified" 11.50 ms (1)
+Dec 23 15:38:55 symfony [info] {sfWebResponse} Send content (28265 o)
+Dec 23 15:39:00 symfony [info] {sfPatternRouting} Match route "verified" (/verified) for /verified with parameters array (  'module' => 'tools',  'action' => 'verified',)
+Dec 23 15:39:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:39:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:39:00 symfony [info] {toolsActions} Call "toolsActions->executeVerified()"
+Dec 23 15:39:00 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/verifiedSuccess.php"
+Dec 23 15:39:00 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:39:00 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:39:00 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/actions/actions.class.php:72))
+Dec 23 15:39:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 15:39:00 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/actions/actions.class.php:72))
+Dec 23 15:39:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:39:00 symfony [info] {sfWebDebugLogger} Configuration 2.35 ms (9)
+Dec 23 15:39:00 symfony [info] {sfWebDebugLogger} Factories 45.75 ms (1)
+Dec 23 15:39:00 symfony [info] {sfWebDebugLogger} Action "tools/verified" 0.41 ms (1)
+Dec 23 15:39:00 symfony [info] {sfWebDebugLogger} View "Success" for "tools/verified" 12.16 ms (1)
+Dec 23 15:39:00 symfony [info] {sfWebResponse} Send content (28260 o)
+Dec 23 15:41:36 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /verified/eb75a215/9f22a6addef07ed6099f22353f877370/ with parameters array (  'module' => 'verified',  'action' => 'eb75a215',  '9f22a6addef07ed6099f22353f877370' => '',)
+Dec 23 15:41:36 symfony [info] {sfFrontWebController} Action "verified/eb75a215" does not exist
+Dec 23 15:41:36 symfony [err] {sfError404Exception} Action "verified/eb75a215" does not exist.
+Dec 23 15:41:36 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Dec 23 15:41:36 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:41:36 symfony [info] {sfWebDebugLogger} Configuration 1.14 ms (5)
+Dec 23 15:41:36 symfony [info] {sfWebDebugLogger} Factories 45.04 ms (1)
+Dec 23 15:42:39 symfony [info] {sfPatternRouting} Match route "verified" (/verified) for /verified with parameters array (  'module' => 'tools',  'action' => 'verified',)
+Dec 23 15:42:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:42:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:42:39 symfony [info] {toolsActions} Call "toolsActions->executeVerified()"
+Dec 23 15:42:39 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/verifiedSuccess.php"
+Dec 23 15:42:39 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:42:39 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:42:39 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/actions/actions.class.php:72))
+Dec 23 15:42:39 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 15:42:39 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/actions/actions.class.php:72))
+Dec 23 15:42:39 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:42:39 symfony [info] {sfWebDebugLogger} Configuration 1.69 ms (9)
+Dec 23 15:42:39 symfony [info] {sfWebDebugLogger} Factories 39.89 ms (1)
+Dec 23 15:42:39 symfony [info] {sfWebDebugLogger} Action "tools/verified" 0.30 ms (1)
+Dec 23 15:42:39 symfony [info] {sfWebDebugLogger} View "Success" for "tools/verified" 11.76 ms (1)
+Dec 23 15:42:39 symfony [info] {sfWebResponse} Send content (28158 o)
+Dec 23 15:45:20 symfony [info] {sfPatternRouting} Match route "verified" (/verified) for /verified with parameters array (  'module' => 'tools',  'action' => 'verified',)
+Dec 23 15:45:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:45:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:45:20 symfony [info] {toolsActions} Call "toolsActions->executeVerified()"
+Dec 23 15:45:45 symfony [info] {sfPatternRouting} Match route "verified" (/verified) for /verified with parameters array (  'module' => 'tools',  'action' => 'verified',)
+Dec 23 15:45:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:45:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:45:45 symfony [info] {toolsActions} Call "toolsActions->executeVerified()"
+Dec 23 15:45:46 symfony [err] {Doctrine_Table_Exception} Invalid expression found: Id
+Dec 23 15:45:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Dec 23 15:45:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:45:46 symfony [info] {sfWebDebugLogger} Configuration 1.56 ms (8)
+Dec 23 15:45:46 symfony [info] {sfWebDebugLogger} Factories 38.97 ms (1)
+Dec 23 15:45:46 symfony [info] {sfWebDebugLogger} Action "tools/verified" 151.30 ms (1)
+Dec 23 15:51:18 symfony [info] {sfPatternRouting} Match route "verified" (/verified) for /verified with parameters array (  'module' => 'tools',  'action' => 'verified',)
+Dec 23 15:51:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:51:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:51:18 symfony [info] {toolsActions} Call "toolsActions->executeVerified()"
+Dec 23 15:51:18 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 15:51:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215)
+Dec 23 15:51:28 symfony [info] {sfPatternRouting} Match route "verified" (/verified) for /verified with parameters array (  'module' => 'tools',  'action' => 'verified',)
+Dec 23 15:51:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:51:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:51:28 symfony [info] {toolsActions} Call "toolsActions->executeVerified()"
+Dec 23 15:51:28 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 15:51:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215)
+Dec 23 15:51:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list2_email m WHERE (m.mailing_list_id = ? AND m.email_id = ?) - (4, 23)
+Dec 23 15:51:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM email e WHERE (e.id = ?) - (23)
+Dec 23 15:51:28 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE mailing_list2_email SET status = ?, updated_at = ? WHERE mailing_list_id = ? AND email_id = ? - (2, 2012-12-23 15:51:28, 4, 23)
+Dec 23 15:51:28 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/verifiedSuccess.php"
+Dec 23 15:51:28 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:51:28 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:51:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 15:51:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:51:28 symfony [info] {sfWebDebugLogger} Configuration 1.55 ms (9)
+Dec 23 15:51:28 symfony [info] {sfWebDebugLogger} Factories 36.83 ms (1)
+Dec 23 15:51:28 symfony [info] {sfWebDebugLogger} Action "tools/verified" 410.88 ms (1)
+Dec 23 15:51:28 symfony [info] {sfWebDebugLogger} Database (Doctrine) 190.96 ms (5)
+Dec 23 15:51:28 symfony [info] {sfWebDebugLogger} View "Success" for "tools/verified" 10.98 ms (1)
+Dec 23 15:51:28 symfony [info] {sfWebResponse} Send content (35910 o)
+Dec 23 15:51:40 symfony [info] {sfPatternRouting} Match route "verified" (/verified) for /verified with parameters array (  'module' => 'tools',  'action' => 'verified',)
+Dec 23 15:51:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:51:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:51:40 symfony [info] {toolsActions} Call "toolsActions->executeVerified()"
+Dec 23 15:51:40 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 15:51:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215)
+Dec 23 15:51:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list2_email m WHERE (m.mailing_list_id = ? AND m.email_id = ?) - (4, 23)
+Dec 23 15:51:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM email e WHERE (e.id = ?) - (23)
+Dec 23 15:51:40 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/verifiedSuccess.php"
+Dec 23 15:51:40 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:51:40 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:51:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 15:51:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:51:40 symfony [info] {sfWebDebugLogger} Configuration 2.16 ms (9)
+Dec 23 15:51:40 symfony [info] {sfWebDebugLogger} Factories 35.68 ms (1)
+Dec 23 15:51:40 symfony [info] {sfWebDebugLogger} Action "tools/verified" 71.43 ms (1)
+Dec 23 15:51:40 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.43 ms (4)
+Dec 23 15:51:40 symfony [info] {sfWebDebugLogger} View "Success" for "tools/verified" 10.77 ms (1)
+Dec 23 15:51:40 symfony [info] {sfWebResponse} Send content (34849 o)
+Dec 23 15:51:44 symfony [info] {sfPatternRouting} Match route "verified" (/verified) for /verified with parameters array (  'module' => 'tools',  'action' => 'verified',)
+Dec 23 15:51:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:51:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:51:44 symfony [info] {toolsActions} Call "toolsActions->executeVerified()"
+Dec 23 15:51:44 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 15:51:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215)
+Dec 23 15:51:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list2_email m WHERE (m.mailing_list_id = ? AND m.email_id = ?) - (4, 24)
+Dec 23 15:52:52 symfony [info] {sfPatternRouting} Match route "verified" (/verified) for /verified with parameters array (  'module' => 'tools',  'action' => 'verified',)
+Dec 23 15:52:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:52:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:52:52 symfony [info] {toolsActions} Call "toolsActions->executeVerified()"
+Dec 23 15:52:52 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 15:52:52 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215)
+Dec 23 15:52:52 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list2_email m WHERE (m.mailing_list_id = ? AND m.email_id = ?) - (4, 24)
+Dec 23 15:52:52 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/verifiedSuccess.php"
+Dec 23 15:52:52 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:52:52 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:52:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 15:52:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:52:52 symfony [info] {sfWebDebugLogger} Configuration 1.90 ms (9)
+Dec 23 15:52:52 symfony [info] {sfWebDebugLogger} Factories 42.02 ms (1)
+Dec 23 15:52:52 symfony [info] {sfWebDebugLogger} Action "tools/verified" 51.46 ms (1)
+Dec 23 15:52:52 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.79 ms (3)
+Dec 23 15:52:52 symfony [info] {sfWebDebugLogger} View "Success" for "tools/verified" 11.93 ms (1)
+Dec 23 15:52:52 symfony [info] {sfWebResponse} Send content (33350 o)
+Dec 23 15:52:54 symfony [info] {sfPatternRouting} Match route "verified" (/verified) for /verified with parameters array (  'module' => 'tools',  'action' => 'verified',)
+Dec 23 15:52:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:52:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:52:54 symfony [info] {toolsActions} Call "toolsActions->executeVerified()"
+Dec 23 15:52:54 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 15:52:54 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215)
+Dec 23 15:52:54 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list2_email m WHERE (m.mailing_list_id = ? AND m.email_id = ?) - (4, 23)
+Dec 23 15:52:54 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM email e WHERE (e.id = ?) - (23)
+Dec 23 15:52:54 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/verifiedSuccess.php"
+Dec 23 15:52:54 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:52:54 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:52:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 15:52:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:52:54 symfony [info] {sfWebDebugLogger} Configuration 1.75 ms (9)
+Dec 23 15:52:54 symfony [info] {sfWebDebugLogger} Factories 42.68 ms (1)
+Dec 23 15:52:54 symfony [info] {sfWebDebugLogger} Action "tools/verified" 66.25 ms (1)
+Dec 23 15:52:54 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.13 ms (4)
+Dec 23 15:52:54 symfony [info] {sfWebDebugLogger} View "Success" for "tools/verified" 13.24 ms (1)
+Dec 23 15:52:54 symfony [info] {sfWebResponse} Send content (34817 o)
+Dec 23 15:52:57 symfony [info] {sfPatternRouting} Match route "verified" (/verified) for /verified with parameters array (  'module' => 'tools',  'action' => 'verified',)
+Dec 23 15:52:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:52:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:52:57 symfony [info] {toolsActions} Call "toolsActions->executeVerified()"
+Dec 23 15:52:57 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 15:52:57 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215)
+Dec 23 15:52:57 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list2_email m WHERE (m.mailing_list_id = ? AND m.email_id = ?) - (4, 23)
+Dec 23 15:52:57 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM email e WHERE (e.id = ?) - (23)
+Dec 23 15:52:58 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/verifiedSuccess.php"
+Dec 23 15:52:58 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:52:58 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:52:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 15:52:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:52:58 symfony [info] {sfWebDebugLogger} Configuration 1.88 ms (9)
+Dec 23 15:52:58 symfony [info] {sfWebDebugLogger} Factories 42.46 ms (1)
+Dec 23 15:52:58 symfony [info] {sfWebDebugLogger} Action "tools/verified" 62.71 ms (1)
+Dec 23 15:52:58 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.21 ms (4)
+Dec 23 15:52:58 symfony [info] {sfWebDebugLogger} View "Success" for "tools/verified" 12.30 ms (1)
+Dec 23 15:52:58 symfony [info] {sfWebResponse} Send content (34786 o)
+Dec 23 15:53:00 symfony [info] {sfPatternRouting} Match route "verified" (/verified) for /verified with parameters array (  'module' => 'tools',  'action' => 'verified',)
+Dec 23 15:53:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:53:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:53:00 symfony [info] {toolsActions} Call "toolsActions->executeVerified()"
+Dec 23 15:53:00 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 15:53:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215)
+Dec 23 15:53:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list2_email m WHERE (m.mailing_list_id = ? AND m.email_id = ?) - (4, 23)
+Dec 23 15:53:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM email e WHERE (e.id = ?) - (23)
+Dec 23 15:53:00 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/verifiedSuccess.php"
+Dec 23 15:53:00 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:53:00 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:53:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 15:53:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:53:00 symfony [info] {sfWebDebugLogger} Configuration 1.96 ms (9)
+Dec 23 15:53:00 symfony [info] {sfWebDebugLogger} Factories 41.54 ms (1)
+Dec 23 15:53:00 symfony [info] {sfWebDebugLogger} Action "tools/verified" 72.32 ms (1)
+Dec 23 15:53:00 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.12 ms (4)
+Dec 23 15:53:00 symfony [info] {sfWebDebugLogger} View "Success" for "tools/verified" 11.89 ms (1)
+Dec 23 15:53:00 symfony [info] {sfWebResponse} Send content (34817 o)
+Dec 23 15:53:36 symfony [info] {sfPatternRouting} Match route "verified" (/verified) for /verified with parameters array (  'module' => 'tools',  'action' => 'verified',)
+Dec 23 15:53:36 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:53:36 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:53:36 symfony [info] {toolsActions} Call "toolsActions->executeVerified()"
+Dec 23 15:53:36 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 15:53:36 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215)
+Dec 23 15:53:36 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list2_email m WHERE (m.mailing_list_id = ? AND m.email_id = ?) - (4, 24)
+Dec 23 15:53:36 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM email e WHERE (e.id = ?) - (24)
+Dec 23 15:53:36 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE mailing_list2_email SET status = ?, updated_at = ? WHERE mailing_list_id = ? AND email_id = ? - (2, 2012-12-23 15:53:36, 4, 24)
+Dec 23 15:53:36 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/verifiedSuccess.php"
+Dec 23 15:53:36 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:53:36 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:53:36 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 15:53:36 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:53:36 symfony [info] {sfWebDebugLogger} Configuration 1.78 ms (9)
+Dec 23 15:53:36 symfony [info] {sfWebDebugLogger} Factories 41.10 ms (1)
+Dec 23 15:53:36 symfony [info] {sfWebDebugLogger} Action "tools/verified" 139.17 ms (1)
+Dec 23 15:53:36 symfony [info] {sfWebDebugLogger} Database (Doctrine) 2.66 ms (5)
+Dec 23 15:53:36 symfony [info] {sfWebDebugLogger} View "Success" for "tools/verified" 11.38 ms (1)
+Dec 23 15:53:36 symfony [info] {sfWebResponse} Send content (35876 o)
+Dec 23 15:57:04 symfony [info] {sfPatternRouting} Match route "remove" (/remove) for /remove with parameters array (  'module' => 'tools',  'action' => 'remove',)
+Dec 23 15:57:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:57:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:57:04 symfony [info] {toolsActions} Call "toolsActions->executeRemove()"
+Dec 23 15:57:04 symfony [err] {sfRenderException} The template "removeSuccess.php" does not exist or is unreadable in "".
+Dec 23 15:57:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Dec 23 15:57:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:57:05 symfony [info] {sfWebDebugLogger} Configuration 143.86 ms (9)
+Dec 23 15:57:05 symfony [info] {sfWebDebugLogger} Factories 105.36 ms (1)
+Dec 23 15:57:05 symfony [info] {sfWebDebugLogger} Action "tools/remove" 0.39 ms (1)
+Dec 23 15:57:05 symfony [info] {sfWebDebugLogger} View "Success" for "tools/remove" 44.94 ms (1)
+Dec 23 15:58:04 symfony [info] {sfPatternRouting} Match route "remove" (/remove) for /remove with parameters array (  'module' => 'tools',  'action' => 'remove',)
+Dec 23 15:58:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:58:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:58:04 symfony [info] {toolsActions} Call "toolsActions->executeRemove()"
+Dec 23 15:58:04 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 15:58:04 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215$md5=3f62888dc656d209670838ae42dcf210)
+Dec 23 15:58:04 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/removeSuccess.php"
+Dec 23 15:58:04 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:58:04 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:58:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 15:58:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:58:04 symfony [info] {sfWebDebugLogger} Configuration 1.81 ms (9)
+Dec 23 15:58:04 symfony [info] {sfWebDebugLogger} Factories 39.07 ms (1)
+Dec 23 15:58:04 symfony [info] {sfWebDebugLogger} Action "tools/remove" 83.56 ms (1)
+Dec 23 15:58:04 symfony [info] {sfWebDebugLogger} Database (Doctrine) 38.10 ms (2)
+Dec 23 15:58:04 symfony [info] {sfWebDebugLogger} View "Success" for "tools/remove" 12.44 ms (1)
+Dec 23 15:58:04 symfony [info] {sfWebResponse} Send content (31474 o)
+Dec 23 15:58:20 symfony [info] {sfPatternRouting} Match route "remove" (/remove) for /remove with parameters array (  'module' => 'tools',  'action' => 'remove',)
+Dec 23 15:58:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:58:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:58:20 symfony [info] {toolsActions} Call "toolsActions->executeRemove()"
+Dec 23 15:58:20 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 15:58:20 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215$md5=3f62888dc656d209670838ae42dcf210)
+Dec 23 15:58:20 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/removeSuccess.php"
+Dec 23 15:58:20 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:58:20 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:58:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 15:58:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:58:20 symfony [info] {sfWebDebugLogger} Configuration 1.85 ms (9)
+Dec 23 15:58:20 symfony [info] {sfWebDebugLogger} Factories 38.75 ms (1)
+Dec 23 15:58:20 symfony [info] {sfWebDebugLogger} Action "tools/remove" 48.92 ms (1)
+Dec 23 15:58:20 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.48 ms (2)
+Dec 23 15:58:20 symfony [info] {sfWebDebugLogger} View "Success" for "tools/remove" 12.52 ms (1)
+Dec 23 15:58:20 symfony [info] {sfWebResponse} Send content (31472 o)
+Dec 23 15:58:31 symfony [info] {sfPatternRouting} Match route "remove" (/remove) for /remove with parameters array (  'module' => 'tools',  'action' => 'remove',)
+Dec 23 15:58:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:58:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:58:31 symfony [info] {toolsActions} Call "toolsActions->executeRemove()"
+Dec 23 15:58:31 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 15:58:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215$md5=3f62888dc656d209670838ae42dcf210)
+Dec 23 15:58:31 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/removeSuccess.php"
+Dec 23 15:58:31 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:58:31 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:58:31 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/actions/actions.class.php:109))
+Dec 23 15:58:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 15:58:31 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/actions/actions.class.php:109))
+Dec 23 15:58:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:58:31 symfony [info] {sfWebDebugLogger} Configuration 1.58 ms (9)
+Dec 23 15:58:31 symfony [info] {sfWebDebugLogger} Factories 39.42 ms (1)
+Dec 23 15:58:31 symfony [info] {sfWebDebugLogger} Action "tools/remove" 44.66 ms (1)
+Dec 23 15:58:31 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.61 ms (2)
+Dec 23 15:58:31 symfony [info] {sfWebDebugLogger} View "Success" for "tools/remove" 11.76 ms (1)
+Dec 23 15:58:31 symfony [info] {sfWebResponse} Send content (31472 o)
+Dec 23 15:58:43 symfony [info] {sfPatternRouting} Match route "remove" (/remove) for /remove with parameters array (  'module' => 'tools',  'action' => 'remove',)
+Dec 23 15:58:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:58:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:58:43 symfony [info] {toolsActions} Call "toolsActions->executeRemove()"
+Dec 23 15:58:43 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 15:58:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215$md5=3f62888dc656d209670838ae42dcf210)
+Dec 23 15:58:43 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/removeSuccess.php"
+Dec 23 15:58:43 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:58:43 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:58:43 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/actions/actions.class.php:109))
+Dec 23 15:58:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 15:58:43 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/actions/actions.class.php:109))
+Dec 23 15:58:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:58:43 symfony [info] {sfWebDebugLogger} Configuration 1.66 ms (9)
+Dec 23 15:58:43 symfony [info] {sfWebDebugLogger} Factories 37.03 ms (1)
+Dec 23 15:58:43 symfony [info] {sfWebDebugLogger} Action "tools/remove" 43.86 ms (1)
+Dec 23 15:58:43 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.56 ms (2)
+Dec 23 15:58:43 symfony [info] {sfWebDebugLogger} View "Success" for "tools/remove" 12.09 ms (1)
+Dec 23 15:58:43 symfony [info] {sfWebResponse} Send content (31472 o)
+Dec 23 15:59:42 symfony [info] {sfPatternRouting} Match route "remove" (/remove) for /remove with parameters array (  'module' => 'tools',  'action' => 'remove',)
+Dec 23 15:59:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 15:59:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 15:59:42 symfony [info] {toolsActions} Call "toolsActions->executeRemove()"
+Dec 23 15:59:42 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 15:59:42 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215)
+Dec 23 15:59:42 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list2_email m WHERE (m.mailing_list_id = ? AND m.email_id = ?) - (4, 28)
+Dec 23 15:59:42 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM email e WHERE (e.id = ?) - (28)
+Dec 23 15:59:42 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/removeSuccess.php"
+Dec 23 15:59:42 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:59:42 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 15:59:42 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/actions/actions.class.php:109))
+Dec 23 15:59:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 15:59:42 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/actions/actions.class.php:109))
+Dec 23 15:59:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 15:59:42 symfony [info] {sfWebDebugLogger} Configuration 1.85 ms (9)
+Dec 23 15:59:42 symfony [info] {sfWebDebugLogger} Factories 47.72 ms (1)
+Dec 23 15:59:42 symfony [info] {sfWebDebugLogger} Action "tools/remove" 68.34 ms (1)
+Dec 23 15:59:42 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.68 ms (4)
+Dec 23 15:59:42 symfony [info] {sfWebDebugLogger} View "Success" for "tools/remove" 13.32 ms (1)
+Dec 23 15:59:42 symfony [info] {sfWebResponse} Send content (34753 o)
+Dec 23 16:00:07 symfony [info] {sfPatternRouting} Match route "remove" (/remove) for /remove with parameters array (  'module' => 'tools',  'action' => 'remove',)
+Dec 23 16:00:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 16:00:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 16:00:07 symfony [info] {toolsActions} Call "toolsActions->executeRemove()"
+Dec 23 16:00:07 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 16:00:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215)
+Dec 23 16:00:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list2_email m WHERE (m.mailing_list_id = ? AND m.email_id = ?) - (4, 28)
+Dec 23 16:00:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM email e WHERE (e.id = ?) - (28)
+Dec 23 16:00:07 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/removeSuccess.php"
+Dec 23 16:00:07 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 16:00:07 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 16:00:07 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/actions/actions.class.php:112))
+Dec 23 16:00:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 16:00:07 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/actions/actions.class.php:112))
+Dec 23 16:00:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 16:00:07 symfony [info] {sfWebDebugLogger} Configuration 1.71 ms (9)
+Dec 23 16:00:07 symfony [info] {sfWebDebugLogger} Factories 39.50 ms (1)
+Dec 23 16:00:07 symfony [info] {sfWebDebugLogger} Action "tools/remove" 63.62 ms (1)
+Dec 23 16:00:07 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.08 ms (4)
+Dec 23 16:00:07 symfony [info] {sfWebDebugLogger} View "Success" for "tools/remove" 12.13 ms (1)
+Dec 23 16:00:07 symfony [info] {sfWebResponse} Send content (34785 o)
+Dec 23 16:00:25 symfony [info] {sfPatternRouting} Match route "remove" (/remove) for /remove with parameters array (  'module' => 'tools',  'action' => 'remove',)
+Dec 23 16:00:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 23 16:00:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 23 16:00:25 symfony [info] {toolsActions} Call "toolsActions->executeRemove()"
+Dec 23 16:00:25 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 23 16:00:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list m WHERE (m.hash = ?) LIMIT 1 - (eb75a215)
+Dec 23 16:00:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id, m.name AS m__name, m.phone AS m__phone, m.status AS m__status, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_list2_email m WHERE (m.mailing_list_id = ? AND m.email_id = ?) - (4, 28)
+Dec 23 16:00:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.email AS e__email, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM email e WHERE (e.id = ?) - (28)
+Dec 23 16:00:25 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM mailing_list2_email WHERE (mailing_list_id = ? AND email_id = ?) - (4, 28)
+Dec 23 16:00:26 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/tools/templates/removeSuccess.php"
+Dec 23 16:00:26 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 16:00:26 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Dec 23 16:00:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 23 16:00:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 23 16:00:26 symfony [info] {sfWebDebugLogger} Configuration 1.80 ms (9)
+Dec 23 16:00:26 symfony [info] {sfWebDebugLogger} Factories 35.31 ms (1)
+Dec 23 16:00:26 symfony [info] {sfWebDebugLogger} Action "tools/remove" 215.74 ms (1)
+Dec 23 16:00:26 symfony [info] {sfWebDebugLogger} Database (Doctrine) 40.89 ms (5)
+Dec 23 16:00:26 symfony [info] {sfWebDebugLogger} View "Success" for "tools/remove" 11.59 ms (1)
+Dec 23 16:00:26 symfony [info] {sfWebResponse} Send content (35775 o)

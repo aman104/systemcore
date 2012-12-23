@@ -16,4 +16,14 @@ class MailingList2EmailTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('MailingList2Email');
     }
+
+    public function findOnebyTwoIds($ml_id, $email_id)
+    {
+    	$q = Doctrine_Query::create()
+    		->from('MailingList2Email')
+    		->where('mailing_list_id =?', $ml_id)
+    		->andWhere('email_id =?' ,$email_id)
+    	;
+    	return $q->fetchOne();
+    }
 }

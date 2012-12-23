@@ -16,4 +16,39 @@ class EmailTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Email');
     }
+
+    public function getOrAddEmail($email)
+    {
+    	$tmp = $this->findOneByEmail($email);
+    	if($tmp instanceof Email)
+    	{
+    		return $tmp;
+    	}
+    	else
+    	{
+    		$tmp = new Email();
+    		$tmp->setEmail(strtolower($email));
+    		$tmp->save();
+    		return $tmp;
+    	}
+    }
+
+    public function sendVerifiedLink($email, $hash, $m2e)
+    {
+        $host = sfConfig::get('app_global_host');
+        $md5_1 = md5($email.$hash.'verify_link');
+        $md5_2 = md5($email.$hash.'delete_link');
+        
+        $url_add = '<a href="'.$host.'/verified?hash='.$hash.'&md5='.$md5_1.'&email='.$m2e.'">Kliknij tutaj</a>';
+
+        $url_delete = '<a href="'.$host.'/remove?hash='.$hash.'&md5='.$md5_2.'&email='.$m2e.'">Kliknij tutaj</a>';
+
+        $content = 'Twoj e-mail został dodany do listy mailingowej, aby go zweryfikować '.$url_add.'<br /><br />Natomiast jeśli chcesz usunąć swój adres email '.$url_delete;
+        
+        Tools::sendEmail($email, 'Aktywacja konta', $content);
+    }
+
+
+        
+
 }
