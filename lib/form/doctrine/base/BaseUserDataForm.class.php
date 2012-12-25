@@ -18,6 +18,7 @@ abstract class BaseUserDataForm extends BaseFormDoctrine
       'id'         => new sfWidgetFormInputHidden(),
       'user_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('User'), 'add_empty' => false)),
       'point'      => new sfWidgetFormInputText(),
+      'verify'     => new sfWidgetFormInputText(),
       'created_at' => new sfWidgetFormDateTime(),
       'updated_at' => new sfWidgetFormDateTime(),
     ));
@@ -26,6 +27,7 @@ abstract class BaseUserDataForm extends BaseFormDoctrine
       'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'user_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('User'))),
       'point'      => new sfValidatorInteger(array('required' => false)),
+      'verify'     => new sfValidatorPass(array('required' => false)),
       'created_at' => new sfValidatorDateTime(),
       'updated_at' => new sfValidatorDateTime(),
     ));

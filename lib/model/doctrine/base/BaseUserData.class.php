@@ -7,13 +7,16 @@
  * 
  * @property integer $user_id
  * @property integer $point
+ * @property text $verify
  * @property User $User
  * 
  * @method integer  getUserId()  Returns the current record's "user_id" value
  * @method integer  getPoint()   Returns the current record's "point" value
+ * @method text     getVerify()  Returns the current record's "verify" value
  * @method User     getUser()    Returns the current record's "User" value
  * @method UserData setUserId()  Sets the current record's "user_id" value
  * @method UserData setPoint()   Sets the current record's "point" value
+ * @method UserData setVerify()  Sets the current record's "verify" value
  * @method UserData setUser()    Sets the current record's "User" value
  * 
  * @package    SystemCore
@@ -34,6 +37,10 @@ abstract class BaseUserData extends sfDoctrineRecord
              'type' => 'integer',
              'notnull' => true,
              'default' => 500,
+             ));
+        $this->hasColumn('verify', 'text', null, array(
+             'type' => 'text',
+             'notnull' => false,
              ));
 
         $this->option('type', 'INNODB');

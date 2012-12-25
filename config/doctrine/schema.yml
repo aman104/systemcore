@@ -45,8 +45,9 @@ User:
 
 UserData:
   columns:    
-    user_id:         {type: integer, notnull: true}
+    user_id:     {type: integer, notnull: true}
     point:			 {type: integer, notnull: true, default: 500}
+    verify:      {type: text, notnull: false }
   relations:
     User:
       type: one

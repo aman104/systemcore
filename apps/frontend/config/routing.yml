@@ -31,11 +31,11 @@ add_subscriber:
 
 verified:
   url: /verified
-  param: {module: tools, action: verified }  
+  param: {module: tools, action: verified }
 
 remove:
   url: /remove
-  param: {module: tools, action: remove }    
+  param: {module: tools, action: remove }
 
 
 # default rules

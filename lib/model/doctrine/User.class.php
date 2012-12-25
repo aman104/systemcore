@@ -165,4 +165,24 @@ class User extends BaseUser
 		$data->save();
 	}
 
+	public function setTestEmails($emails)
+	{
+		$olds = $this->getUserTestEmail();
+		foreach($olds as $old)
+		{
+			$old->delete();
+		}
+		for($i == 1; $i <= 5; $i++)
+		{
+			if(isset($emails['emails_'.$i]) && $emails['emails_'.$i] != '')
+			{
+				$testEmail = new UserTestEmail();
+				$testEmail->setUserId($this->getPrimaryKey());
+				$testEmail->setEmail($emails['emails_'.$i]);
+				$testEmail->save();
+			}
+		}
+		
+	}
+
 }

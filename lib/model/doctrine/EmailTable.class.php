@@ -43,9 +43,14 @@ class EmailTable extends Doctrine_Table
 
         $url_delete = '<a href="'.$host.'/remove?hash='.$hash.'&md5='.$md5_2.'&email='.$m2e.'">Kliknij tutaj</a>';
 
-        $content = 'Twoj e-mail został dodany do listy mailingowej, aby go zweryfikować '.$url_add.'<br /><br />Natomiast jeśli chcesz usunąć swój adres email '.$url_delete;
+        $list = MailingListTable::getInstance()->findOneByHash($hash);
+        $user = $list->getUser();
+        $content = $user->getUserData()->getVerify();
+
+        $content = str_replace('{verify_link}', $url_add, $content);
+        $content = str_replace('{delete_link}', $url_delete, $content);
         
-        Tools::sendEmail($email, 'Aktywacja konta', $content);
+        Tools::sendEmail($email, 'Weryfikacja adresu email', $content);
     }
 
 
