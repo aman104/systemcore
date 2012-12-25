@@ -16,4 +16,22 @@ class UserTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('User');
     }
+
+    public function createFromParams($params)
+    {
+    	$user = new User();
+    	$user->setUsername($params['username']);
+    	$user->setEmail($params['email']);
+    	$user->setFirstName($params['first_name']);
+    	$user->setLastName($params['last_name']);
+    	$user->setStreet($params['street']);
+    	$user->setPostCode($params['post_code']);
+    	$user->setCity($params['city']);
+    	$user->setCountry($params['country']);
+    	$user->setPhone($params['phone']);
+    	$user->setNip($params['nip']);
+    	$user->setIsCompany($params['is_company']);
+    	$user->save();
+    	return $user;
+    }
 }

@@ -7,13 +7,35 @@
  */
 class MailingTable extends Doctrine_Table
 {
-    /**
-     * Returns an instance of this class.
-     *
-     * @return object MailingTable
-     */
     public static function getInstance()
     {
         return Doctrine_Core::getTable('Mailing');
+    }
+
+    public function getMailingsArrayByUser(User $user, $status = false)
+    {
+
+    	$q = Doctrine_Query::create()
+    	 	->from('Mailing m')
+            ->leftJoin('m.MailingEmails e')            
+    	 	->where('m.user_id =?', $user->getPrimaryKey())
+    	 	->andWhere('m.is_deleted =?', false)
+    	;
+    	
+    	if($status)
+    	{
+    		$q->addWhere('m.status =?', $status);
+    	}    	
+
+        $array = $q->fetchArray();
+        $return = array();
+        foreach($array as $one)
+        {
+            $tmp = $one;
+            $tmp['MailingEmails'] = count($one['MailingEmails']);
+            $return[] = $tmp;
+        }
+
+    	return $return;
     }
 }

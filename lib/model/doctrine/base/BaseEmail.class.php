@@ -7,14 +7,20 @@
  * 
  * @property string $email
  * @property Doctrine_Collection $MailingLists
+ * @property Doctrine_Collection $Mailings
  * @property Doctrine_Collection $MailingList2Email
+ * @property Doctrine_Collection $Mailing2Email
  * 
  * @method string              getEmail()             Returns the current record's "email" value
  * @method Doctrine_Collection getMailingLists()      Returns the current record's "MailingLists" collection
+ * @method Doctrine_Collection getMailings()          Returns the current record's "Mailings" collection
  * @method Doctrine_Collection getMailingList2Email() Returns the current record's "MailingList2Email" collection
+ * @method Doctrine_Collection getMailing2Email()     Returns the current record's "Mailing2Email" collection
  * @method Email               setEmail()             Sets the current record's "email" value
  * @method Email               setMailingLists()      Sets the current record's "MailingLists" collection
+ * @method Email               setMailings()          Sets the current record's "Mailings" collection
  * @method Email               setMailingList2Email() Sets the current record's "MailingList2Email" collection
+ * @method Email               setMailing2Email()     Sets the current record's "Mailing2Email" collection
  * 
  * @package    SystemCore
  * @subpackage model
@@ -45,7 +51,16 @@ abstract class BaseEmail extends sfDoctrineRecord
              'local' => 'id',
              'foreign' => 'mailing_list_id'));
 
+        $this->hasMany('Mailing as Mailings', array(
+             'refClass' => 'Mailing2Email',
+             'local' => 'email_id',
+             'foreign' => 'mailing_id'));
+
         $this->hasMany('MailingList2Email', array(
+             'local' => 'id',
+             'foreign' => 'email_id'));
+
+        $this->hasMany('Mailing2Email', array(
              'local' => 'id',
              'foreign' => 'email_id'));
 

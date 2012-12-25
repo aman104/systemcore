@@ -3,6 +3,7 @@
 class SmUserAuth {
 	
 	private static $request;
+	private static $params = false;
 
 	public static function getUserAuthRequest(sfWebRequest $request)
 	{
@@ -11,9 +12,14 @@ class SmUserAuth {
 		$_get = self::$request->getGetParameters();
 		$_post = self::$request->getPostParameters();
 
-		
+		if(isset($_get['format']) && $_get['format'] == 'json')
+		{
+		 	$_post = json_decode($_post['json'], true);
+		}		
 
 		$params = array_merge($_get, $_post);
+
+		self::$params = $params;
 
 		// echo '<pre>';
 		// print_r($params);
@@ -31,8 +37,11 @@ class SmUserAuth {
 			throw new SmUserAuth_Exception('WRONG CSRF');
 		}
 
-		return $params;
+	}
 
+	public static function getParamsRequest()
+	{
+		return self::$params;
 	}
 
 	public static function checkCSRF(User $user, $params)

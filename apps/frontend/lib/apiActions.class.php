@@ -3,36 +3,37 @@
 class ApiActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
-  {
+  {    
     try
     {  
 
       $user = SmUserAuth::getUserAuthRequest($request);
-      $return = '';    
+      $params = SmUserAuth::getParamsRequest();
+      $return = '';        
 
       switch($request->getMethod())
       {
         case 'POST' : 
 
-          $return = $this->SmPostExecute($request, $user);
+          $return = $this->SmPostExecute($request, $user, $params);
 
           break;
 
         case 'PUT' : 
 
-          $return = $this->SmPutExecute($request, $user);
+          $return = $this->SmPutExecute($request, $user, $params);
 
           break;
 
         case 'DELETE' : 
 
-          $return = $this->SmDeleteExecute($request, $user);
+          $return = $this->SmDeleteExecute($request, $user, $params);
 
           break;
 
         default: 
 
-          $return = $this->SmGetExecute($request, $user);
+          $return = $this->SmGetExecute($request, $user, $params);
 
       }
 

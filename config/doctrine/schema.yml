@@ -27,6 +27,10 @@ User:
       foreignType: one
       local: id
       foreign: user_id
+    UserTestEmail:
+      type: many
+      local: id
+      foreign: user_id
     MailingLists:
       class: MailingList
       type: many
@@ -51,6 +55,17 @@ UserData:
       foreign: id
       onDelete: CASCADE   
 
+UserTestEmail:
+  columns:    
+    user_id:         {type: integer, notnull: true}
+    email:           {type: string,  notnull: true}
+  relations:
+    User:
+      type: one
+      local: user_id
+      foreign: id
+      onDelete: CASCADE       
+
 MailingList:
   columns:    
     user_id:         {type: integer, notnull: true}
@@ -68,6 +83,12 @@ MailingList:
       type: many
       local: id
       foreign: email_id
+    Mailings:
+      class: Mailing
+      refClass: Mailing2MailingList
+      type: many
+      local: mailing_list_id
+      foreign: mailing_id      
 
 Email:
   columns: 
@@ -78,6 +99,12 @@ Email:
       type: many
       local: id
       foreign: mailing_list_id
+    Mailings:
+      class: Mailing
+      refClass: Mailing2Email
+      type: many
+      local: email_id
+      foreign: mailing_id      
 
 MailingList2Email:
   columns:    
@@ -101,16 +128,63 @@ Mailing:
     user_id:  {type: integer, notnull: true}
     title:    {type: string(255), notnull: true}
     html:     {type: text, notnull: false }
+    text:     {type: text, notnull: false }
     public:   {type: text, notnull: false }
+    settings: {type: text, notnull: false }
     status:   {type: integer, notnull: true, default: 1}
+    hash:      {type: string(8), notnull: false, unique: true}
+    time_start: {type: timestamp, format: Y-m-d H:i:s, notnull: false }
+    time_end:   {type: timestamp, format: Y-m-d H:i:s, notnull: false }
+    is_deleted: {type: boolean, default: 0}
   relations:
     User:
       type: one
       local: user_id
-      foreign: id    
+      foreign: id  
+    MailingLists:
+      class: MailingList
+      refClass: Mailing2MailingList
+      type: many
+      local: mailing_id
+      foreign: mailing_list_id
+    MailingEmails:
+      class: Email
+      refClass: Mailing2Email
+      type: many
+      local: mailing_id
+      foreign: email_id      
+
+Mailing2Email:
+  columns:
+    mailing_id:  {type: integer, notnull: true, primary: true}
+    email_id:    {type: integer, notnull: true, primary: true}
+    status:      {type: integer, notnull: true, default: 1}
+  relations:
+    Mailing:
+      local: mailing_id
+      foreign: id
+      onDelete: CASCADE
+    Email:
+      local: email_id
+      foreign: id
+      onDelete: CASCADE
+
+Mailing2MailingList:
+  columns:
+    mailing_id:  {type: integer, notnull: true, primary: true}
+    mailing_list_id:  {type: integer, notnull: true, primary: true}
+  relations:
+    MailingList:
+      local: mailing_list_id
+      foreign: id
+      onDelete: CASCADE
+    Mailing:
+      local: mailing_id
+      foreign: id
+      onDelete: CASCADE
 
 Config:
   columns:    
-    record:              {type: string(255), notnull: true, unique: true}
+    record:           {type: string(255), notnull: true, unique: true}
     value:            {type: text, notnull: true }
 

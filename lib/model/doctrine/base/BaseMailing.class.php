@@ -8,22 +8,52 @@
  * @property integer $user_id
  * @property string $title
  * @property text $html
+ * @property text $text
  * @property text $public
+ * @property text $settings
  * @property integer $status
+ * @property string $hash
+ * @property timestamp $time_start
+ * @property timestamp $time_end
+ * @property boolean $is_deleted
  * @property User $User
+ * @property Doctrine_Collection $MailingLists
+ * @property Doctrine_Collection $MailingEmails
+ * @property Doctrine_Collection $Mailing2Email
+ * @property Doctrine_Collection $Mailing2MailingList
  * 
- * @method integer getUserId()  Returns the current record's "user_id" value
- * @method string  getTitle()   Returns the current record's "title" value
- * @method text    getHtml()    Returns the current record's "html" value
- * @method text    getPublic()  Returns the current record's "public" value
- * @method integer getStatus()  Returns the current record's "status" value
- * @method User    getUser()    Returns the current record's "User" value
- * @method Mailing setUserId()  Sets the current record's "user_id" value
- * @method Mailing setTitle()   Sets the current record's "title" value
- * @method Mailing setHtml()    Sets the current record's "html" value
- * @method Mailing setPublic()  Sets the current record's "public" value
- * @method Mailing setStatus()  Sets the current record's "status" value
- * @method Mailing setUser()    Sets the current record's "User" value
+ * @method integer             getUserId()              Returns the current record's "user_id" value
+ * @method string              getTitle()               Returns the current record's "title" value
+ * @method text                getHtml()                Returns the current record's "html" value
+ * @method text                getText()                Returns the current record's "text" value
+ * @method text                getPublic()              Returns the current record's "public" value
+ * @method text                getSettings()            Returns the current record's "settings" value
+ * @method integer             getStatus()              Returns the current record's "status" value
+ * @method string              getHash()                Returns the current record's "hash" value
+ * @method timestamp           getTimeStart()           Returns the current record's "time_start" value
+ * @method timestamp           getTimeEnd()             Returns the current record's "time_end" value
+ * @method boolean             getIsDeleted()           Returns the current record's "is_deleted" value
+ * @method User                getUser()                Returns the current record's "User" value
+ * @method Doctrine_Collection getMailingLists()        Returns the current record's "MailingLists" collection
+ * @method Doctrine_Collection getMailingEmails()       Returns the current record's "MailingEmails" collection
+ * @method Doctrine_Collection getMailing2Email()       Returns the current record's "Mailing2Email" collection
+ * @method Doctrine_Collection getMailing2MailingList() Returns the current record's "Mailing2MailingList" collection
+ * @method Mailing             setUserId()              Sets the current record's "user_id" value
+ * @method Mailing             setTitle()               Sets the current record's "title" value
+ * @method Mailing             setHtml()                Sets the current record's "html" value
+ * @method Mailing             setText()                Sets the current record's "text" value
+ * @method Mailing             setPublic()              Sets the current record's "public" value
+ * @method Mailing             setSettings()            Sets the current record's "settings" value
+ * @method Mailing             setStatus()              Sets the current record's "status" value
+ * @method Mailing             setHash()                Sets the current record's "hash" value
+ * @method Mailing             setTimeStart()           Sets the current record's "time_start" value
+ * @method Mailing             setTimeEnd()             Sets the current record's "time_end" value
+ * @method Mailing             setIsDeleted()           Sets the current record's "is_deleted" value
+ * @method Mailing             setUser()                Sets the current record's "User" value
+ * @method Mailing             setMailingLists()        Sets the current record's "MailingLists" collection
+ * @method Mailing             setMailingEmails()       Sets the current record's "MailingEmails" collection
+ * @method Mailing             setMailing2Email()       Sets the current record's "Mailing2Email" collection
+ * @method Mailing             setMailing2MailingList() Sets the current record's "Mailing2MailingList" collection
  * 
  * @package    SystemCore
  * @subpackage model
@@ -48,7 +78,15 @@ abstract class BaseMailing extends sfDoctrineRecord
              'type' => 'text',
              'notnull' => false,
              ));
+        $this->hasColumn('text', 'text', null, array(
+             'type' => 'text',
+             'notnull' => false,
+             ));
         $this->hasColumn('public', 'text', null, array(
+             'type' => 'text',
+             'notnull' => false,
+             ));
+        $this->hasColumn('settings', 'text', null, array(
              'type' => 'text',
              'notnull' => false,
              ));
@@ -56,6 +94,26 @@ abstract class BaseMailing extends sfDoctrineRecord
              'type' => 'integer',
              'notnull' => true,
              'default' => 1,
+             ));
+        $this->hasColumn('hash', 'string', 8, array(
+             'type' => 'string',
+             'notnull' => false,
+             'unique' => true,
+             'length' => 8,
+             ));
+        $this->hasColumn('time_start', 'timestamp', null, array(
+             'type' => 'timestamp',
+             'format' => 'Y-m-d H:i:s',
+             'notnull' => false,
+             ));
+        $this->hasColumn('time_end', 'timestamp', null, array(
+             'type' => 'timestamp',
+             'format' => 'Y-m-d H:i:s',
+             'notnull' => false,
+             ));
+        $this->hasColumn('is_deleted', 'boolean', null, array(
+             'type' => 'boolean',
+             'default' => 0,
              ));
 
         $this->option('type', 'INNODB');
@@ -69,6 +127,24 @@ abstract class BaseMailing extends sfDoctrineRecord
         $this->hasOne('User', array(
              'local' => 'user_id',
              'foreign' => 'id'));
+
+        $this->hasMany('MailingList as MailingLists', array(
+             'refClass' => 'Mailing2MailingList',
+             'local' => 'mailing_id',
+             'foreign' => 'mailing_list_id'));
+
+        $this->hasMany('Email as MailingEmails', array(
+             'refClass' => 'Mailing2Email',
+             'local' => 'mailing_id',
+             'foreign' => 'email_id'));
+
+        $this->hasMany('Mailing2Email', array(
+             'local' => 'id',
+             'foreign' => 'mailing_id'));
+
+        $this->hasMany('Mailing2MailingList', array(
+             'local' => 'id',
+             'foreign' => 'mailing_id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable();
         $this->actAs($timestampable0);

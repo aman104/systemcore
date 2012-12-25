@@ -115,4 +115,22 @@ class MailingList extends BaseMailingList
 		return $q->execute();
 	}
 
+
+	public function getVeryfiedEmailIds()
+	{
+		$q = Doctrine_Query::create()
+			->from('MailingList2Email m2e')
+			->select('m2e.email_id')
+			->where('m2e.mailing_list_id =?', $this->getPrimaryKey())
+			->andWhere('m2e.status =?', 2);
+		$tmp = $q->fetchArray();
+		$ids = array();
+		foreach($tmp as $one)
+		{
+			$ids[] = $one['email_id'];
+		}
+		return $ids;
+		return $tmp;
+	}
+
 }

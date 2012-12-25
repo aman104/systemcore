@@ -1,9 +1,21 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
+debug:
+  url: /debug
+  param: {module: debug, action: index }
+
+register:
+  url: /register
+  param: {module: register, action: index }
+
 user:
   url: /user
   param: {module: user, action: index }
+
+mailing:
+  url: /mainling
+  param: {module: mailing, action: index }
 
 email:
   url: /email
