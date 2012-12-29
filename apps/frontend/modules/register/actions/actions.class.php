@@ -16,7 +16,10 @@ class registerActions extends sfActions
  	{
  		$params = $request->getPostParameters(); 		
  		$return = UserTable::getInstance()->createFromParams($params);
- 		echo json_encode($return->returnToArray());  
+ 		$array = $return->toArray();
+ 		echo json_encode($array); 
+ 		return sfView::NONE;
+ 		exit; 
  	}
   }
 }
