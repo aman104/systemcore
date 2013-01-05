@@ -201,4 +201,16 @@ class User extends BaseUser
 		
 	}
 
+	public function addPayment($points)
+	{
+		$new = new Payment();
+		$new->setUserId($this->getPrimaryKey());
+		$new->setPoints($points);
+		$new->setPrice(PaymentTable::getInstance()->getPrice($points));
+		$new->setSymbol('PLN');
+		$new->setStatus(1);
+		$new->save();
+		return $new;
+	}
+
 }
