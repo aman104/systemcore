@@ -19,6 +19,7 @@
  * @property User $User
  * @property Doctrine_Collection $MailingLists
  * @property Doctrine_Collection $MailingEmails
+ * @property Doctrine_Collection $MailingLinks
  * @property Doctrine_Collection $Mailing2Email
  * @property Doctrine_Collection $Mailing2MailingList
  * 
@@ -36,6 +37,7 @@
  * @method User                getUser()                Returns the current record's "User" value
  * @method Doctrine_Collection getMailingLists()        Returns the current record's "MailingLists" collection
  * @method Doctrine_Collection getMailingEmails()       Returns the current record's "MailingEmails" collection
+ * @method Doctrine_Collection getMailingLinks()        Returns the current record's "MailingLinks" collection
  * @method Doctrine_Collection getMailing2Email()       Returns the current record's "Mailing2Email" collection
  * @method Doctrine_Collection getMailing2MailingList() Returns the current record's "Mailing2MailingList" collection
  * @method Mailing             setUserId()              Sets the current record's "user_id" value
@@ -52,6 +54,7 @@
  * @method Mailing             setUser()                Sets the current record's "User" value
  * @method Mailing             setMailingLists()        Sets the current record's "MailingLists" collection
  * @method Mailing             setMailingEmails()       Sets the current record's "MailingEmails" collection
+ * @method Mailing             setMailingLinks()        Sets the current record's "MailingLinks" collection
  * @method Mailing             setMailing2Email()       Sets the current record's "Mailing2Email" collection
  * @method Mailing             setMailing2MailingList() Sets the current record's "Mailing2MailingList" collection
  * 
@@ -137,6 +140,10 @@ abstract class BaseMailing extends sfDoctrineRecord
              'refClass' => 'Mailing2Email',
              'local' => 'mailing_id',
              'foreign' => 'email_id'));
+
+        $this->hasMany('MailingLink as MailingLinks', array(
+             'local' => 'id',
+             'foreign' => 'mailing_id'));
 
         $this->hasMany('Mailing2Email', array(
              'local' => 'id',

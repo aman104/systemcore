@@ -158,7 +158,24 @@ Mailing:
       refClass: Mailing2Email
       type: many
       local: mailing_id
-      foreign: email_id      
+      foreign: email_id   
+    MailingLinks:
+      class: MailingLink
+      type: many
+      local: id
+      foreign: mailing_id
+
+MailingLink:
+  columns:
+    mailing_id: {type: integer, notnull: true}
+    source:     {type: string(255), notnull: true}
+    link:       {type: string(255), notnull: true, unique: true}
+    click:      {type: integer, notnull: true, default: 0}
+  relations:
+    Mailing:
+      type: one
+      local: mailing_id
+      foreign: id    
 
 Mailing2Email:
   columns:

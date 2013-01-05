@@ -41,6 +41,10 @@ remove:
   url: /remove
   param: {module: tools, action: remove }
 
+link:
+  url: /link/:hash
+  param: {module: tools, action: link }
+
 
 # default rules
 homepage:
