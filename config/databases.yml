@@ -7,4 +7,4 @@ all:
     param:
       dsn:      mysql:host=localhost;dbname=systemcore
       username: root
-      password: aman12pl
+      password: pawel12pl
