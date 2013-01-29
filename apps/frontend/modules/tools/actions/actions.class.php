@@ -138,4 +138,18 @@ class toolsActions extends sfActions
   	}		  	  
   }
 
+  public function executeLink(sfWebRequest $request)
+  {
+  	$hash = $request->getParameter('hash');
+  	$link = MailingLinkTable::getInstance()->findOneByLink($hash);
+  	if($link)
+  	{
+  		$count = $link->getClick();
+  		$count++;
+  		$link->setClick($count);
+  		$link->save();
+  		$this->redirect($link->getSource());
+  	}
+  }
+
 }

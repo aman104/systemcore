@@ -32,8 +32,8 @@ class Mailing extends BaseMailing
 
 	public function run()
 	{
-		if($this->getStatus() == 1)
-		{
+		//if($this->getStatus() == 1)
+		//{
 			$this->setStatus(2);
 			$this->setTimeStart(date('Y-m-d: H:i:s', time()));
 
@@ -43,7 +43,7 @@ class Mailing extends BaseMailing
 			$this->getUser()->takePoints($points);
 
 			$this->save();
-		}
+		//}
 			
 	}
 
@@ -79,6 +79,47 @@ class Mailing extends BaseMailing
 
 	private function publishHtml()
 	{
-		$this->setPublic($this->getHtml());
+
+		$html = $this->getHtml();
+
+		$html = $this->generateLinks($html);
+
+		$this->setPublic($html);
 	}
+
+	private function generateLinks($html)
+	{
+		$urls = array();
+	  	$regexp = "<a\s[^>]*href=(\"??)([^\" >]*?)\\1[^>]*>(.*)<\/a>";	
+	    if(preg_match_all("/$regexp/siU", $html, $matches, PREG_SET_ORDER)) 
+	    {
+		    foreach($matches as $match) 
+		    {
+		      if($match[2] != '#')
+		      {
+		      	$urls[$match[2]] = $match[2];		      	
+		      }		      
+		    }
+	    }	  
+	    return $this->setLinks($urls, $html);
+	}
+
+	private function setLinks($urls, $html)
+	{
+		foreach($urls as $url)
+		{
+			$new = new MailingLink();
+			$new->setMailingId($this->getPrimaryKey());
+			$new->setSource($url);
+			$link = md5($url.$this->getPrimaryKey());
+			$new->setLink($link);
+			$new->save();
+
+			$html = str_replace('href="'.$url.'"', 'href="http://systemcore.sf.pl/link/'.$link.'"', $html);
+
+		}
+		return $html;
+	}
+
+
 }

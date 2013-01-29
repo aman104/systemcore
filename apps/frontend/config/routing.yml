@@ -9,6 +9,10 @@ register:
   url: /register
   param: {module: register, action: index }
 
+payment:
+  url: /payment
+  param: {module: payment, action: index }
+
 user:
   url: /user
   param: {module: user, action: index }
@@ -36,6 +40,10 @@ verified:
 remove:
   url: /remove
   param: {module: tools, action: remove }
+
+link:
+  url: /link/:hash
+  param: {module: tools, action: link }
 
 
 # default rules

@@ -15,12 +15,28 @@ class User extends BaseUser
 
 	public function save(Doctrine_Connection $conn = null)
 	{
+		$set_data = false;
 		if($this->isNew())
 		{
 			$this->setApiToken(Tools::genUniqueHash(30));
 			$this->setApiSecret(Tools::genUniqueHash(30));
+
+			$set_data = true;
+
 		}
-		return parent::save($conn);
+		$user = parent::save($conn);
+
+		if($set_data)
+		{
+
+			$data = new UserData();
+			$data->setUserId($this->getPrimaryKey());
+			$data->setPoint(500);
+			$data->setVerify('<p>Tw&oacute;j adres e-mail został dodany do grupy mailingowej.</p><p>Aby potwierdzić adres e-mail {verify_link}</p><p>&nbsp;</p><p>Jeśli chceś usunąć sw&oacute;j adres e-mail a listy mailingowej {delete_link}</p>');
+			$data->save();
+		}
+
+		return $user;
 	}
 
 	public function addMailingList($params)
@@ -183,6 +199,18 @@ class User extends BaseUser
 			}
 		}
 		
+	}
+
+	public function addPayment($points)
+	{
+		$new = new Payment();
+		$new->setUserId($this->getPrimaryKey());
+		$new->setPoints($points);
+		$new->setPrice(PaymentTable::getInstance()->getPrice($points));
+		$new->setSymbol('PLN');
+		$new->setStatus(1);
+		$new->save();
+		return $new;
 	}
 
 }

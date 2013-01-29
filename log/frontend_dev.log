@@ -1662,3 +1662,184 @@ Dec 24 15:35:52 symfony [info] {sfWebDebugLogger} Action "debug/index" 91.03 ms 
 Dec 24 15:35:52 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.71 ms (6)
 Dec 24 15:35:52 symfony [info] {sfWebDebugLogger} View "Success" for "debug/index" 10.93 ms (1)
 Dec 24 15:35:52 symfony [info] {sfWebResponse} Send content (43861 o)
+Jan 05 13:36:10 symfony [info] {sfPatternRouting} Match route "debug" (/debug) for /debug with parameters array (  'module' => 'debug',  'action' => 'index',)
+Jan 05 13:36:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 05 13:36:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 05 13:36:10 symfony [info] {debugActions} Call "debugActions->executeIndex()"
+Jan 05 13:36:10 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 05 13:36:10 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.title AS m__title, m.html AS m__html, m.text AS m__text, m.public AS m__public, m.settings AS m__settings, m.status AS m__status, m.hash AS m__hash, m.time_start AS m__time_start, m.time_end AS m__time_end, m.is_deleted AS m__is_deleted, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing m WHERE (m.id = ?) LIMIT 1 - (1)
+Jan 05 13:36:10 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at, m2.mailing_id AS m2__mailing_id, m2.mailing_list_id AS m2__mailing_list_id, m2.created_at AS m2__created_at, m2.updated_at AS m2__updated_at FROM mailing_list m LEFT JOIN mailing2_mailing_list m2 ON m.id = m2.mailing_list_id WHERE (m2.mailing_id IN (?)) - (1)
+Jan 05 13:36:10 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id FROM mailing_list2_email m WHERE (m.mailing_list_id = ? AND m.status = ?) - (1, 2)
+Jan 05 13:36:34 symfony [info] {sfPatternRouting} Match route "debug" (/debug) for /debug with parameters array (  'module' => 'debug',  'action' => 'index',)
+Jan 05 13:36:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 05 13:36:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 05 13:36:34 symfony [info] {debugActions} Call "debugActions->executeIndex()"
+Jan 05 13:36:34 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 05 13:36:34 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.title AS m__title, m.html AS m__html, m.text AS m__text, m.public AS m__public, m.settings AS m__settings, m.status AS m__status, m.hash AS m__hash, m.time_start AS m__time_start, m.time_end AS m__time_end, m.is_deleted AS m__is_deleted, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing m WHERE (m.id = ?) LIMIT 1 - (1)
+Jan 05 13:36:34 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at, m2.mailing_id AS m2__mailing_id, m2.mailing_list_id AS m2__mailing_list_id, m2.created_at AS m2__created_at, m2.updated_at AS m2__updated_at FROM mailing_list m LEFT JOIN mailing2_mailing_list m2 ON m.id = m2.mailing_list_id WHERE (m2.mailing_id IN (?)) - (1)
+Jan 05 13:36:34 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id FROM mailing_list2_email m WHERE (m.mailing_list_id = ? AND m.status = ?) - (1, 2)
+Jan 05 13:36:34 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO mailing_link (click, mailing_id, source, link, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?) - (0, 1, http://onet.pl, http://systemcore.sf.pl/link/47afb2157c6b4c78b669b86abc5c21b7, 2013-01-05 13:36:34, 2013-01-05 13:36:34)
+Jan 05 13:36:34 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO mailing_link (click, mailing_id, source, link, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?) - (0, 1, http://wp.pl, http://systemcore.sf.pl/link/837436747a41949dec9686fa5ebeca80, 2013-01-05 13:36:34, 2013-01-05 13:36:34)
+Jan 05 13:36:34 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.api_token AS u__api_token, u.api_secret AS u__api_secret, u.first_name AS u__first_name, u.last_name AS u__last_name, u.email AS u__email, u.phone AS u__phone, u.street AS u__street, u.post_code AS u__post_code, u.city AS u__city, u.country AS u__country, u.is_company AS u__is_company, u.nip AS u__nip, u.status AS u__status, u.invoice_id AS u__invoice_id, u.created_at AS u__created_at, u.updated_at AS u__updated_at FROM user u WHERE (u.id = ?) - (3)
+Jan 05 13:36:34 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.user_id AS u__user_id, u.point AS u__point, u.verify AS u__verify, u.created_at AS u__created_at, u.updated_at AS u__updated_at FROM user_data u WHERE (u.user_id = ?) - (3)
+Jan 05 13:36:34 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE mailing SET time_start = ?, updated_at = ? WHERE id = ? - (2013-01-05: 13:36:34, 2013-01-05 13:36:34, 1)
+Jan 05 13:36:34 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/debug/templates/indexSuccess.php"
+Jan 05 13:36:34 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Jan 05 13:36:34 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Jan 05 13:36:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 05 13:36:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 05 13:36:34 symfony [info] {sfWebDebugLogger} Configuration 1.61 ms (9)
+Jan 05 13:36:34 symfony [info] {sfWebDebugLogger} Factories 51.52 ms (1)
+Jan 05 13:36:34 symfony [info] {sfWebDebugLogger} Action "debug/index" 272.84 ms (1)
+Jan 05 13:36:34 symfony [info] {sfWebDebugLogger} Database (Doctrine) 19.56 ms (9)
+Jan 05 13:36:34 symfony [info] {sfWebDebugLogger} View "Success" for "debug/index" 43.00 ms (1)
+Jan 05 13:36:34 symfony [info] {sfWebResponse} Send content (43955 o)
+Jan 05 13:39:16 symfony [info] {sfPatternRouting} Match route "debug" (/debug) for /debug with parameters array (  'module' => 'debug',  'action' => 'index',)
+Jan 05 13:39:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 05 13:39:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 05 13:39:16 symfony [info] {debugActions} Call "debugActions->executeIndex()"
+Jan 05 13:39:16 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 05 13:39:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.title AS m__title, m.html AS m__html, m.text AS m__text, m.public AS m__public, m.settings AS m__settings, m.status AS m__status, m.hash AS m__hash, m.time_start AS m__time_start, m.time_end AS m__time_end, m.is_deleted AS m__is_deleted, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing m WHERE (m.id = ?) LIMIT 1 - (1)
+Jan 05 13:39:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at, m2.mailing_id AS m2__mailing_id, m2.mailing_list_id AS m2__mailing_list_id, m2.created_at AS m2__created_at, m2.updated_at AS m2__updated_at FROM mailing_list m LEFT JOIN mailing2_mailing_list m2 ON m.id = m2.mailing_list_id WHERE (m2.mailing_id IN (?)) - (1)
+Jan 05 13:39:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id FROM mailing_list2_email m WHERE (m.mailing_list_id = ? AND m.status = ?) - (1, 2)
+Jan 05 13:39:16 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO mailing_link (click, mailing_id, source, link, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?) - (0, 1, http://onet.pl, http://systemcore.sf.pl/link/47afb2157c6b4c78b669b86abc5c21b7, 2013-01-05 13:39:16, 2013-01-05 13:39:16)
+Jan 05 13:39:16 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO mailing_link (click, mailing_id, source, link, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?) - (0, 1, http://wp.pl, http://systemcore.sf.pl/link/837436747a41949dec9686fa5ebeca80, 2013-01-05 13:39:16, 2013-01-05 13:39:16)
+Jan 05 13:39:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.api_token AS u__api_token, u.api_secret AS u__api_secret, u.first_name AS u__first_name, u.last_name AS u__last_name, u.email AS u__email, u.phone AS u__phone, u.street AS u__street, u.post_code AS u__post_code, u.city AS u__city, u.country AS u__country, u.is_company AS u__is_company, u.nip AS u__nip, u.status AS u__status, u.invoice_id AS u__invoice_id, u.created_at AS u__created_at, u.updated_at AS u__updated_at FROM user u WHERE (u.id = ?) - (3)
+Jan 05 13:39:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.user_id AS u__user_id, u.point AS u__point, u.verify AS u__verify, u.created_at AS u__created_at, u.updated_at AS u__updated_at FROM user_data u WHERE (u.user_id = ?) - (3)
+Jan 05 13:39:16 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE mailing SET time_start = ?, public = ?, updated_at = ? WHERE id = ? - (2013-01-05: 13:39:16, [0.27Kb], 2013-01-05 13:39:16, 1)
+Jan 05 13:39:16 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/debug/templates/indexSuccess.php"
+Jan 05 13:39:16 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Jan 05 13:39:16 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Jan 05 13:39:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 05 13:39:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 05 13:39:16 symfony [info] {sfWebDebugLogger} Configuration 2.12 ms (9)
+Jan 05 13:39:16 symfony [info] {sfWebDebugLogger} Factories 38.51 ms (1)
+Jan 05 13:39:16 symfony [info] {sfWebDebugLogger} Action "debug/index" 229.54 ms (1)
+Jan 05 13:39:16 symfony [info] {sfWebDebugLogger} Database (Doctrine) 20.40 ms (9)
+Jan 05 13:39:16 symfony [info] {sfWebDebugLogger} View "Success" for "debug/index" 13.91 ms (1)
+Jan 05 13:39:16 symfony [info] {sfWebResponse} Send content (43998 o)
+Jan 05 13:40:05 symfony [info] {sfPatternRouting} Match route "debug" (/debug) for /debug with parameters array (  'module' => 'debug',  'action' => 'index',)
+Jan 05 13:40:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 05 13:40:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 05 13:40:05 symfony [info] {debugActions} Call "debugActions->executeIndex()"
+Jan 05 13:40:05 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 05 13:40:05 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.title AS m__title, m.html AS m__html, m.text AS m__text, m.public AS m__public, m.settings AS m__settings, m.status AS m__status, m.hash AS m__hash, m.time_start AS m__time_start, m.time_end AS m__time_end, m.is_deleted AS m__is_deleted, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing m WHERE (m.id = ?) LIMIT 1 - (1)
+Jan 05 13:40:05 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.name AS m__name, m.hash AS m__hash, m.created_at AS m__created_at, m.updated_at AS m__updated_at, m2.mailing_id AS m2__mailing_id, m2.mailing_list_id AS m2__mailing_list_id, m2.created_at AS m2__created_at, m2.updated_at AS m2__updated_at FROM mailing_list m LEFT JOIN mailing2_mailing_list m2 ON m.id = m2.mailing_list_id WHERE (m2.mailing_id IN (?)) - (1)
+Jan 05 13:40:05 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.mailing_list_id AS m__mailing_list_id, m.email_id AS m__email_id FROM mailing_list2_email m WHERE (m.mailing_list_id = ? AND m.status = ?) - (1, 2)
+Jan 05 13:40:05 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO mailing_link (click, mailing_id, source, link, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?) - (0, 1, http://onet.pl, http://systemcore.sf.pl/link/47afb2157c6b4c78b669b86abc5c21b7, 2013-01-05 13:40:05, 2013-01-05 13:40:05)
+Jan 05 13:40:05 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO mailing_link (click, mailing_id, source, link, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?) - (0, 1, http://wp.pl, http://systemcore.sf.pl/link/837436747a41949dec9686fa5ebeca80, 2013-01-05 13:40:05, 2013-01-05 13:40:05)
+Jan 05 13:40:05 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.api_token AS u__api_token, u.api_secret AS u__api_secret, u.first_name AS u__first_name, u.last_name AS u__last_name, u.email AS u__email, u.phone AS u__phone, u.street AS u__street, u.post_code AS u__post_code, u.city AS u__city, u.country AS u__country, u.is_company AS u__is_company, u.nip AS u__nip, u.status AS u__status, u.invoice_id AS u__invoice_id, u.created_at AS u__created_at, u.updated_at AS u__updated_at FROM user u WHERE (u.id = ?) - (3)
+Jan 05 13:40:05 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.user_id AS u__user_id, u.point AS u__point, u.verify AS u__verify, u.created_at AS u__created_at, u.updated_at AS u__updated_at FROM user_data u WHERE (u.user_id = ?) - (3)
+Jan 05 13:40:05 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE mailing SET time_start = ?, public = ?, updated_at = ? WHERE id = ? - (2013-01-05: 13:40:05, [0.28Kb], 2013-01-05 13:40:05, 1)
+Jan 05 13:40:05 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/debug/templates/indexSuccess.php"
+Jan 05 13:40:05 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Jan 05 13:40:05 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Jan 05 13:40:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 05 13:40:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 05 13:40:05 symfony [info] {sfWebDebugLogger} Configuration 1.79 ms (9)
+Jan 05 13:40:05 symfony [info] {sfWebDebugLogger} Factories 36.74 ms (1)
+Jan 05 13:40:05 symfony [info] {sfWebDebugLogger} Action "debug/index" 219.46 ms (1)
+Jan 05 13:40:05 symfony [info] {sfWebDebugLogger} Database (Doctrine) 11.98 ms (9)
+Jan 05 13:40:05 symfony [info] {sfWebDebugLogger} View "Success" for "debug/index" 15.19 ms (1)
+Jan 05 13:40:06 symfony [info] {sfWebResponse} Send content (43998 o)
+Jan 05 15:56:52 symfony [info] {sfPatternRouting} Match route "link" (/link/:hash) for /link/97e53ec6637a919ff21e5c90aa5a472f with parameters array (  'module' => 'tools',  'action' => 'link',  'hash' => '97e53ec6637a919ff21e5c90aa5a472f',)
+Jan 05 15:56:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 05 15:56:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 05 15:56:52 symfony [info] {toolsActions} Call "toolsActions->executeLink()"
+Jan 05 15:56:52 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 05 15:56:52 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.mailing_id AS m__mailing_id, m.source AS m__source, m.link AS m__link, m.click AS m__click, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_link m WHERE (m.link = ?) LIMIT 1 - (97e53ec6637a919ff21e5c90aa5a472f)
+Jan 05 15:56:52 symfony [err] {Doctrine_Record_UnknownPropertyException} Unknown record property / related component "count" on "MailingLink"
+Jan 05 15:56:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Jan 05 15:56:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 05 15:56:52 symfony [info] {sfWebDebugLogger} Configuration 140.40 ms (8)
+Jan 05 15:56:52 symfony [info] {sfWebDebugLogger} Factories 186.90 ms (1)
+Jan 05 15:56:52 symfony [info] {sfWebDebugLogger} Action "tools/link" 145.82 ms (1)
+Jan 05 15:56:52 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.61 ms (2)
+Jan 05 15:57:14 symfony [info] {sfPatternRouting} Match route "link" (/link/:hash) for /link/97e53ec6637a919ff21e5c90aa5a472f with parameters array (  'module' => 'tools',  'action' => 'link',  'hash' => '97e53ec6637a919ff21e5c90aa5a472f',)
+Jan 05 15:57:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 05 15:57:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 05 15:57:14 symfony [info] {toolsActions} Call "toolsActions->executeLink()"
+Jan 05 15:57:14 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 05 15:57:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.mailing_id AS m__mailing_id, m.source AS m__source, m.link AS m__link, m.click AS m__click, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_link m WHERE (m.link = ?) LIMIT 1 - (97e53ec6637a919ff21e5c90aa5a472f)
+Jan 05 15:57:14 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE mailing_link SET click = ?, updated_at = ? WHERE id = ? - (1, 2013-01-05 15:57:14, 3)
+Jan 05 15:57:14 symfony [info] {sfFrontWebController} Redirect to "http://wp.pl"
+Jan 05 15:57:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jan 05 15:57:14 symfony [info] {sfWebResponse} Send header "Location: http://wp.pl"
+Jan 05 15:57:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 05 15:57:14 symfony [info] {sfWebDebugLogger} Configuration 1.63 ms (8)
+Jan 05 15:57:14 symfony [info] {sfWebDebugLogger} Factories 37.49 ms (1)
+Jan 05 15:57:14 symfony [info] {sfWebDebugLogger} Action "tools/link" 181.86 ms (1)
+Jan 05 15:57:14 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.21 ms (3)
+Jan 05 15:57:14 symfony [info] {sfWebResponse} Send content (83 o)
+Jan 05 16:07:41 symfony [info] {sfPatternRouting} Match route "debug" (/debug) for /debug with parameters array (  'module' => 'debug',  'action' => 'index',)
+Jan 05 16:07:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 05 16:07:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 05 16:07:41 symfony [info] {debugActions} Call "debugActions->executeIndex()"
+Jan 05 16:07:41 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 05 16:07:41 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.title AS m__title, m.html AS m__html, m.text AS m__text, m.public AS m__public, m.settings AS m__settings, m.status AS m__status, m.hash AS m__hash, m.time_start AS m__time_start, m.time_end AS m__time_end, m.is_deleted AS m__is_deleted, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing m WHERE (m.id = ?) LIMIT 1 - (2)
+Jan 05 16:07:41 symfony [err] {Doctrine_Query_Exception} Unknown column mailing_id
+Jan 05 16:07:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Jan 05 16:07:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 05 16:07:41 symfony [info] {sfWebDebugLogger} Configuration 34.33 ms (9)
+Jan 05 16:07:41 symfony [info] {sfWebDebugLogger} Factories 38.03 ms (1)
+Jan 05 16:07:41 symfony [info] {sfWebDebugLogger} Action "debug/index" 258.28 ms (1)
+Jan 05 16:07:41 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.62 ms (2)
+Jan 05 16:07:58 symfony [info] {sfPatternRouting} Match route "debug" (/debug) for /debug with parameters array (  'module' => 'debug',  'action' => 'index',)
+Jan 05 16:07:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 05 16:07:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 05 16:07:58 symfony [info] {debugActions} Call "debugActions->executeIndex()"
+Jan 05 16:07:58 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 05 16:07:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.title AS m__title, m.html AS m__html, m.text AS m__text, m.public AS m__public, m.settings AS m__settings, m.status AS m__status, m.hash AS m__hash, m.time_start AS m__time_start, m.time_end AS m__time_end, m.is_deleted AS m__is_deleted, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing m WHERE (m.id = ?) LIMIT 1 - (2)
+Jan 05 16:07:58 symfony [err] {Doctrine_Query_Exception} Unknown column mailing_id
+Jan 05 16:07:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Jan 05 16:07:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 05 16:07:58 symfony [info] {sfWebDebugLogger} Configuration 1.60 ms (8)
+Jan 05 16:07:58 symfony [info] {sfWebDebugLogger} Factories 36.44 ms (1)
+Jan 05 16:07:58 symfony [info] {sfWebDebugLogger} Action "debug/index" 243.69 ms (1)
+Jan 05 16:07:58 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.54 ms (2)
+Jan 05 16:11:35 symfony [info] {sfPatternRouting} Match route "debug" (/debug) for /debug with parameters array (  'module' => 'debug',  'action' => 'index',)
+Jan 05 16:11:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 05 16:11:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 05 16:11:35 symfony [info] {debugActions} Call "debugActions->executeIndex()"
+Jan 05 16:11:35 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 05 16:11:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.title AS m__title, m.html AS m__html, m.text AS m__text, m.public AS m__public, m.settings AS m__settings, m.status AS m__status, m.hash AS m__hash, m.time_start AS m__time_start, m.time_end AS m__time_end, m.is_deleted AS m__is_deleted, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing m WHERE (m.id = ?) LIMIT 1 - (1)
+Jan 05 16:11:35 symfony [err] {Doctrine_Query_Exception} Unknown column mailing_id
+Jan 05 16:11:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Jan 05 16:11:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 05 16:11:35 symfony [info] {sfWebDebugLogger} Configuration 1.52 ms (8)
+Jan 05 16:11:35 symfony [info] {sfWebDebugLogger} Factories 35.19 ms (1)
+Jan 05 16:11:35 symfony [info] {sfWebDebugLogger} Action "debug/index" 234.26 ms (1)
+Jan 05 16:11:35 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.90 ms (2)
+Jan 05 16:11:37 symfony [info] {sfPatternRouting} Match route "debug" (/debug) for /debug with parameters array (  'module' => 'debug',  'action' => 'index',)
+Jan 05 16:11:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 05 16:11:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 05 16:11:37 symfony [info] {debugActions} Call "debugActions->executeIndex()"
+Jan 05 16:11:37 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 05 16:11:37 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.title AS m__title, m.html AS m__html, m.text AS m__text, m.public AS m__public, m.settings AS m__settings, m.status AS m__status, m.hash AS m__hash, m.time_start AS m__time_start, m.time_end AS m__time_end, m.is_deleted AS m__is_deleted, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing m WHERE (m.id = ?) LIMIT 1 - (1)
+Jan 05 16:11:37 symfony [err] {Doctrine_Query_Exception} Unknown column mailing_id
+Jan 05 16:11:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Jan 05 16:11:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 05 16:11:37 symfony [info] {sfWebDebugLogger} Configuration 1.70 ms (8)
+Jan 05 16:11:37 symfony [info] {sfWebDebugLogger} Factories 36.71 ms (1)
+Jan 05 16:11:37 symfony [info] {sfWebDebugLogger} Action "debug/index" 252.27 ms (1)
+Jan 05 16:11:37 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.61 ms (2)
+Jan 05 16:15:18 symfony [info] {sfPatternRouting} Match route "debug" (/debug) for /debug with parameters array (  'module' => 'debug',  'action' => 'index',)
+Jan 05 16:15:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 05 16:15:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 05 16:15:18 symfony [info] {debugActions} Call "debugActions->executeIndex()"
+Jan 05 16:15:18 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 05 16:15:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.user_id AS m__user_id, m.title AS m__title, m.html AS m__html, m.text AS m__text, m.public AS m__public, m.settings AS m__settings, m.status AS m__status, m.hash AS m__hash, m.time_start AS m__time_start, m.time_end AS m__time_end, m.is_deleted AS m__is_deleted, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing m WHERE (m.id = ?) LIMIT 1 - (1)
+Jan 05 16:15:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.mailing_id AS m__mailing_id, m.source AS m__source, m.link AS m__link, m.click AS m__click, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM mailing_link m WHERE (m.mailing_id IN (?)) - (1)
+Jan 05 16:15:18 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/modules/debug/templates/indexSuccess.php"
+Jan 05 16:15:18 symfony [info] {sfPHPView} Decorate content with "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Jan 05 16:15:18 symfony [info] {sfPHPView} Render "/home/aman/www/sf.pl/systemcore/apps/frontend/templates/layout.php"
+Jan 05 16:15:18 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/apps/frontend/modules/debug/actions/actions.class.php:24))
+Jan 05 16:15:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 05 16:15:18 symfony [warning] {sfWebDebugLogger}  Warning at /home/aman/www/sf.pl/systemcore/lib/vendor/symfony/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/aman/www/sf.pl/systemcore/apps/frontend/modules/debug/actions/actions.class.php:24))
+Jan 05 16:15:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 05 16:15:18 symfony [info] {sfWebDebugLogger} Configuration 14.72 ms (10)
+Jan 05 16:15:18 symfony [info] {sfWebDebugLogger} Factories 39.86 ms (1)
+Jan 05 16:15:18 symfony [info] {sfWebDebugLogger} Action "debug/index" 59.51 ms (1)
+Jan 05 16:15:18 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.50 ms (3)
+Jan 05 16:15:18 symfony [info] {sfWebDebugLogger} View "Success" for "debug/index" 41.65 ms (1)
+Jan 05 16:15:18 symfony [info] {sfWebResponse} Send content (33636 o)

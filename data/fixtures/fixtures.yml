@@ -1,36 +1,36 @@
-User:
-  User1:
-    username: aman
-    api_token: WWERV234523V@Vv2345n57345q3453
-    api_secret: ERTNY567X4567$B56v34563456345n
-    first_name: Paweł
-    last_name: Sałajczyk
-    email: psalajczyk@gmail.com
-    phone: 500356085
-    street: Krzywa 2
-    city: Strzebiń
-    post_code: 42-288
-    country: PL
-    is_company: 0
-    status: 1
+# User:
+#   User1:
+#     username: aman
+#     api_token: WWERV234523V@Vv2345n57345q3453
+#     api_secret: ERTNY567X4567$B56v34563456345n
+#     first_name: Paweł
+#     last_name: Sałajczyk
+#     email: psalajczyk@gmail.com
+#     phone: 500356085
+#     street: Krzywa 2
+#     city: Strzebiń
+#     post_code: 42-288
+#     country: PL
+#     is_company: 0
+#     status: 1
 
-UserData:
-  UserData1:
-    User: User1
-    point: 5000
+# UserData:
+#   UserData1:
+#     User: User1
+#     point: 5000
 
-UserTestEmail:
-  UTE1:
-    User: User1
-    email: psalajczyk@gmail.com
-  UTE2:
-    User: User1
-    email: psalajczyk+2@gmail.com
+# UserTestEmail:
+#   UTE1:
+#     User: User1
+#     email: psalajczyk@gmail.com
+#   UTE2:
+#     User: User1
+#     email: psalajczyk+2@gmail.com
 
-MailingList:
-  ML1:
-    User: User1
-    name: "Lista testowa 1"
-  ML2:
-    User: User1
-    name: "Lista testowa 2"
+# MailingList:
+#   ML1:
+#     User: User1
+#     name: "Lista testowa 1"
+#   ML2:
+#     User: User1
+#     name: "Lista testowa 2"

@@ -17,15 +17,12 @@ class debugActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    $user = UserTable::getInstance()->findOneByApiToken('f106798898ee9bd2d1d4d3d0144822');
+    $mailing = MailingTable::getInstance()->find(1);
 
-    $mailings = MailingTable::getInstance()->getMailingsArrayByUser($user, 2);
+    //$mailing->run();
 
-    $mailing = $user->getMailingByHash('5558edd9');
+    print_r($mailing->getMailingLinks()->toArray());
 
-    echo '<pre>';
-    print_r($mailings);
-    echo '</pre>';
     
   }
 }

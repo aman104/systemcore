@@ -41,7 +41,12 @@ User:
       type: many
       foreignType: one
       local: id
-      foreign: user_id      
+      foreign: user_id  
+    Payments:
+      type: many
+      foreignType: one
+      local: id
+      foreign: user_id
 
 UserData:
   columns:    
@@ -153,7 +158,24 @@ Mailing:
       refClass: Mailing2Email
       type: many
       local: mailing_id
-      foreign: email_id      
+      foreign: email_id   
+    MailingLinks:
+      class: MailingLink
+      type: many
+      local: id
+      foreign: mailing_id
+
+MailingLink:
+  columns:
+    mailing_id: {type: integer, notnull: true}
+    source:     {type: string(255), notnull: true}
+    link:       {type: string(255), notnull: true, unique: true}
+    click:      {type: integer, notnull: true, default: 0}
+  relations:
+    Mailing:
+      type: one
+      local: mailing_id
+      foreign: id    
 
 Mailing2Email:
   columns:
@@ -184,8 +206,25 @@ Mailing2MailingList:
       foreign: id
       onDelete: CASCADE
 
+Payment:
+  columns:
+    user_id:    {type: integer, notnull: true}
+    hash:       {type: string(255), notnull: true, unique: true}
+    points:     {type: integer, notnull: true, default: 0}
+    price:      {type: integer, notnull: true, default: 0}
+    symbol:     {type: string(255), notnull: true, default: 'PLN'}
+    status:     {type: integer, notnull: true, default: 1}
+    invoice_id: {type: integer, notnull: false}
+  relations:
+    User:
+      type: one
+      local: user_id
+      foreign: id
+      onDelete: CASCADE    
+
 Config:
   columns:    
     record:           {type: string(255), notnull: true, unique: true}
     value:            {type: text, notnull: true }
+
 
