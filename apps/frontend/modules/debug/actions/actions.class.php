@@ -1,5 +1,8 @@
 <?php
 
+
+
+
 /**
  * debug actions.
  *
@@ -17,11 +20,18 @@ class debugActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    $mailing = MailingTable::getInstance()->find(1);
+    $user = UserTable::getInstance()->find(1);
+    $return1 = MailingTable::getInstance()->getMailingsArrayByUser($user, 3);
+    $return2 = MailingTable::getInstance()->getMailingsArrayByUser($user, 3);
+    $return3 = MailingTable::getInstance()->getMailingsArrayByUser($user, 3);
 
-    //$mailing->run();
+    echo count($return1).'<br />';
+    echo count($return2).'<br />';
+    echo count($return3).'<br />';
 
-    print_r($mailing->getMailingLinks()->toArray());
+
+    exit;
+
 
     
   }

@@ -1,6 +1,11 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
+
+payment_done:
+  url: /payment/:hash
+  param: { module: tools, action: payment }
+
 debug:
   url: /debug
   param: {module: debug, action: index }
@@ -20,6 +25,18 @@ user:
 mailing:
   url: /mainling
   param: {module: mailing, action: index }
+
+mailing_delete_email:
+  url: /delete/email/:hash
+  param: {module: tools, action: deleteEmail }
+
+mailing_open_email:
+  url: /open/:hash
+  param: {module: tools, action: openEmail }
+
+mailing_runs_email:
+  url: /mailingrun/:hash
+  param: {module: tools, action: mailingRun }
 
 email:
   url: /email
@@ -45,6 +62,9 @@ link:
   url: /link/:hash
   param: {module: tools, action: link }
 
+preview: 
+  url: /preview/:hash
+  param: {module: tools, action: preview }
 
 # default rules
 homepage:

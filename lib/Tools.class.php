@@ -1,17 +1,33 @@
 <?php
 
+use Zend\Mail;
+use Zend\Mime\Message as MimeMessage;
+use Zend\Mime\Part as MimePart;
+
 class Tools
 {
 
-	static function sendEmail($to, $title, $content, $from = 'system@core.pl')
+	static function sendEmail($to, $title, $content, $from = array('name' => 'SystemCore', 'email' => 'system@core.pl'), $text = false)
 	{
-		$headers = '';
-    	$headers  .= 'MIME-Version: 1.0' . "\r\n";
-    	$headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-    	$headers .= "From: ". $from . " <" . $from . ">\r\n";
-    	ini_set('sendmail_from', $from);
-    	mail($to, $title, $content, $headers);
-	}
+        $text = new MimePart($text);
+        $text->type = "text/plain";
+
+        $html = new MimePart($content);
+        $html->type = "text/html";
+
+        $body = new MimeMessage();
+        $body->setParts(array($text, $html));
+
+        $mail = new Mail\Message();
+        $mail->setBody($body);
+        $mail->setFrom($from['email'], $from['name']);
+        $mail->addTo($to);
+        $mail->setSubject($title);
+
+        $transport = new Mail\Transport\Sendmail();
+        $transport->send($mail);
+        
+  	}
 
 	static function genUniqueHash($length = NULL){        
         $id = uniqid(hash("sha512",rand()), TRUE);

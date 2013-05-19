@@ -17,22 +17,34 @@ class statisticActions extends ApiActions
 
  	public function SmGetExecute(sfWebRequest $request, User $user)
  	{
- 	   $return = 'ERROR';
+  	   $return = 'ERROR';
 
- 	   $hash = $request->getParameter('mailing_hash');       	  
+ 	     $hash = $request->getParameter('mailing_hash');       	  
   	   $method = $request->getParameter('method');
 
-  	   $mailing = $user->getMailingByHash($hash, true);
+       if($method == 'emails')
+       {
+          $return = MailingTable::getInstance()->getEmails($user, $hash, $request->getParameter('status'));
+       }  
+       elseif($method == 'mailing_list_emails')
+       {
+          $return = MailingListTable::getInstance()->getEmails($user, $request->getParameter('status'));
+       } 
+       else
+       {
+        $mailing = $user->getMailingByHash($hash, true);
 
-  	   if($mailing)
-  	   {
-  	   	   if($method == 'links')
-	  	   {
-	  	   		$return = $mailing->getMailingLinks()->toArray();
-	  	   }	
-  	   }  	   
-
-  	   return $return;
+         if($mailing)
+         {
+           if($method == 'links')
+           {
+              $return = $mailing->getMailingLinks()->toArray();
+           }
+           
+        } 
+      }
+  	     	 
+      return $return;
  	}
 
  	public function SmPutExecute(sfWebRequest $request, User $user)

@@ -21,11 +21,6 @@ class SmUserAuth {
 
 		self::$params = $params;
 
-		// echo '<pre>';
-		// print_r($params);
-		// echo '</pre>';
-		// exit;
-
 		$user = UserTable::getInstance()->findOneByApiToken($params['api_token']);
 
 		if(self::checkCSRF($user, $params))

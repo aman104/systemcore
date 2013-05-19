@@ -131,13 +131,16 @@ MailingList2Email:
 
 Mailing:
   columns:
-    user_id:  {type: integer, notnull: true}
-    title:    {type: string(255), notnull: true}
-    html:     {type: text, notnull: false }
-    text:     {type: text, notnull: false }
-    public:   {type: text, notnull: false }
-    settings: {type: text, notnull: false }
-    status:   {type: integer, notnull: true, default: 1}
+    user_id:   {type: integer, notnull: true}
+    title:     {type: string(255), notnull: true}
+    html:      {type: text, notnull: false }
+    text:      {type: text, notnull: false }
+    public:    {type: text, notnull: false }
+    name_from:      {type: string(255), notnull: true}
+    email_from:     {type: string(255), notnull: true}
+    settings:  {type: text, notnull: false }
+    css:       {type: text, notnull: false }
+    status:    {type: integer, notnull: true, default: 1}
     hash:      {type: string(8), notnull: false, unique: true}
     time_start: {type: timestamp, format: Y-m-d H:i:s, notnull: false }
     time_end:   {type: timestamp, format: Y-m-d H:i:s, notnull: false }

@@ -30,32 +30,43 @@ class mailingActions extends ApiActions
   	  $status = $request->getParameter('status');
   	  if((int)$status > 0)
   	  {  	  	
-  	  	$return = MailingTable::getInstance()->getMailingsArrayByUser($user, $status);
-  	  }
+  	   $return = MailingTable::getInstance()->getMailingsArrayByUser($user, $status);
+  	   //$return = array();
+      }
+      else
+      {
+        $hash = $request->getParameter('hash');
+        $method = $request->getParameter('method');
 
-  	  $hash = $request->getParameter('hash');
-  	  $method = $request->getParameter('method');
-
-  	  if(isset($hash))
-  	  {
-  	  	if($method == 'run')
-  	  	{
-  	  		$mailing = $user->getMailingByHash($hash, true);
-  	  		$mailing->run();
-  	  		$return = $mailing->toArray();
-  	  	}
-  	  	elseif($method == 'test')
-  	  	{
-  	  		$mailing = $user->getMailingByHash($hash, true);
-  	  		$mailing->test();
-  	  		$return = $mailing->toArray();
-  	  	}
-  	  	else
-  	  	{
-  	  		$return = $user->getMailingByHash($hash);	
-  	  	}
-  	  	
-  	  }
+        if(isset($hash))
+        {
+          if($method == 'run')
+          {
+            $mailing = $user->getMailingByHash($hash, true);
+            $mailing->run();
+            $return = $mailing->toArray();
+          }
+          elseif($method == 'test')
+          {
+            $mailing = $user->getMailingByHash($hash, true);
+            $tmp = $mailing->test();
+            if($tmp)
+            {
+              $return = $mailing->toArray();  
+            }
+            else
+            {
+              $return = false;
+            }
+          }
+          else
+          {
+            $return = $user->getMailingByHash($hash); 
+          }
+          
+        }  
+      }
+  	  
 
   	  return $return;
   }
@@ -69,6 +80,9 @@ class mailingActions extends ApiActions
   	 	$mailing->setTitle($params['title']);	
   	 	$mailing->setHtml($params['html']);
   	 	$mailing->setText($params['text']);
+      $mailing->setCss($params['css']);
+      $mailing->setNameFrom($params['name_from']);
+      $mailing->setEmailFrom($params['email_from']);
   	 	$mailing->save();
   	 	$mailing->clearMailingList();
 		foreach($params['mailing_list'] as $one)

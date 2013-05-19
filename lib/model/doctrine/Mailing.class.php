@@ -32,8 +32,8 @@ class Mailing extends BaseMailing
 
 	public function run()
 	{
-		//if($this->getStatus() == 1)
-		//{
+		if($this->getStatus() == 1)
+		{
 			$this->setStatus(2);
 			$this->setTimeStart(date('Y-m-d: H:i:s', time()));
 
@@ -43,23 +43,37 @@ class Mailing extends BaseMailing
 			$this->getUser()->takePoints($points);
 
 			$this->save();
-		//}
+		}
 			
 	}
 
 	public function test()
 	{
 		$title = $this->getTitle();
+
 		$content = $this->getHtml();
+		$content = $this->prepareHtml($content);
+		$content = str_replace('{open_link}', '', $content);
+
+		$from = array('name' => $this->getNameFrom(), 'email' => $this->getEmailFrom());
 
 		$user = $this->getUser();
 		$emails = $user->getUserTestEmail();
 
-		foreach($emails as $email)
+		if(count($emails) > 0)
 		{
-		 	$to = $email->getEmail();		
-		 	Tools::sendEmail($to, $title, $content);	
-		}				
+			foreach($emails as $email)
+			{
+			 	$to = $email->getEmail();		
+			 	Tools::sendEmail($to, $title, $content, $from);	
+			}	
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+						
 	}
 
 	private function setEmailsGroup()
@@ -81,8 +95,8 @@ class Mailing extends BaseMailing
 	{
 
 		$html = $this->getHtml();
-
 		$html = $this->generateLinks($html);
+		$html = $this->prepareHtml($html);
 
 		$this->setPublic($html);
 	}
@@ -121,5 +135,63 @@ class Mailing extends BaseMailing
 		return $html;
 	}
 
+	public function prepareHtml($html)
+	{
+
+		$html = str_replace('{preview_link}', $this->getPreviewLink(), $html);
+
+		$content = '<html>';
+		$content .= '<head>';
+		$content .= '<meta charset="utf-8" />';
+		$content .= '<style>';
+		$content .= $this->getCss();
+		$content .= '</style>';
+		$content .= '</head>';
+		$content .= '<body class="main-page">';
+		$content .= $html;
+		$content .= '{open_link}';
+		$content .= '</body>';
+		$content .= '</html>';
+
+		return $content;
+	}
+
+	public function getPreviewLink()
+	{
+		return '<a href="'.Tools::getSiteNameUrl().'/preview/'.$this->getHash().'">kliknij tutaj</a>';
+	}
+
+	public function getDeleteLink($email)
+	{
+		return '<a href="'.Tools::getSiteNameUrl().'/delete/email/'.$this->getHash().'?email='.urlencode($email).'">kliknij tutaj</a>';
+	}
+
+	public function sendEmails()
+	{
+		$baseHtml = $this->getPublic();
+
+		$emails = $this->getMailingEmails();
+		$from = array('name' => $this->getNameFrom(), 'email' => $this->getEmailFrom());
+		foreach($emails as $emailObj)
+		{
+			$to = $emailObj->getEmail();
+			$m2e = $emailObj->getMailing2Email();
+			$m2e[0]->setStatus(2)->save();
+			$html = str_replace('{delete_link}', $this->getDeleteLink($to), $baseHtml);
+			$html = str_replace('{open_link}', '<img src="'.$this->getOpenLink($to).'" style="width: 1px height: 1px; background: none;" />', $html);
+			//$html = str_replace('{person}', $m2e[0]->getPerson(), $html);
+			Tools::sendEmail($to, $this->getTitle(), $html, $from, $this->getText());	
+		}
+
+		$this->setStatus(3);
+		$this->setTimeEnd(date('Y-m-d H:i:s', time()));
+		$this->save();
+
+	}
+
+	public function getOpenLink($email)
+	{
+		return Tools::getSiteNameUrl().'/open/'.$this->getHash().'?email='.urlencode($email);
+	}
 
 }

@@ -10,7 +10,10 @@
  * @property text $html
  * @property text $text
  * @property text $public
+ * @property string $name_from
+ * @property string $email_from
  * @property text $settings
+ * @property text $css
  * @property integer $status
  * @property string $hash
  * @property timestamp $time_start
@@ -28,7 +31,10 @@
  * @method text                getHtml()                Returns the current record's "html" value
  * @method text                getText()                Returns the current record's "text" value
  * @method text                getPublic()              Returns the current record's "public" value
+ * @method string              getNameFrom()            Returns the current record's "name_from" value
+ * @method string              getEmailFrom()           Returns the current record's "email_from" value
  * @method text                getSettings()            Returns the current record's "settings" value
+ * @method text                getCss()                 Returns the current record's "css" value
  * @method integer             getStatus()              Returns the current record's "status" value
  * @method string              getHash()                Returns the current record's "hash" value
  * @method timestamp           getTimeStart()           Returns the current record's "time_start" value
@@ -45,7 +51,10 @@
  * @method Mailing             setHtml()                Sets the current record's "html" value
  * @method Mailing             setText()                Sets the current record's "text" value
  * @method Mailing             setPublic()              Sets the current record's "public" value
+ * @method Mailing             setNameFrom()            Sets the current record's "name_from" value
+ * @method Mailing             setEmailFrom()           Sets the current record's "email_from" value
  * @method Mailing             setSettings()            Sets the current record's "settings" value
+ * @method Mailing             setCss()                 Sets the current record's "css" value
  * @method Mailing             setStatus()              Sets the current record's "status" value
  * @method Mailing             setHash()                Sets the current record's "hash" value
  * @method Mailing             setTimeStart()           Sets the current record's "time_start" value
@@ -89,7 +98,21 @@ abstract class BaseMailing extends sfDoctrineRecord
              'type' => 'text',
              'notnull' => false,
              ));
+        $this->hasColumn('name_from', 'string', 255, array(
+             'type' => 'string',
+             'notnull' => true,
+             'length' => 255,
+             ));
+        $this->hasColumn('email_from', 'string', 255, array(
+             'type' => 'string',
+             'notnull' => true,
+             'length' => 255,
+             ));
         $this->hasColumn('settings', 'text', null, array(
+             'type' => 'text',
+             'notnull' => false,
+             ));
+        $this->hasColumn('css', 'text', null, array(
              'type' => 'text',
              'notnull' => false,
              ));

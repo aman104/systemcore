@@ -55,7 +55,10 @@ class User extends BaseUser
 		$mailing->setTitle($params['title']);
 		$mailing->setHtml($params['html']);
 		$mailing->setText($params['text']);
+		$mailing->setNameFrom($params['name_from']);
+		$mailing->setEmailFrom($params['email_from']);
 		$mailing->setStatus($params['status']);
+		$mailing->setCss($params['css']);
 		$mailing->save();
 
 		foreach($params['mailing_list'] as $one)

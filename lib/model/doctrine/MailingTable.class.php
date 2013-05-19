@@ -20,6 +20,8 @@ class MailingTable extends Doctrine_Table
             ->leftJoin('m.MailingEmails e')            
     	 	->where('m.user_id =?', $user->getPrimaryKey())
     	 	->andWhere('m.is_deleted =?', false)
+            ->useQueryCache(null)
+            ->useResultCache(null);
     	;
     	
     	if($status)
@@ -37,5 +39,29 @@ class MailingTable extends Doctrine_Table
         }
 
     	return $return;
+    }
+
+    public function getEmails(User $user, $hash = false, $status = false)
+    {
+        $q = Doctrine_Query::create()
+            ->select('e.email, me.status')
+            ->from('Email e')
+            ->leftJoin('e.Mailing2Email me')
+            ->leftJoin('me.Mailing m')
+            ->where('m.user_id =?', $user->getPrimaryKey())
+            ;
+
+        if((int)$status > 0)
+        {
+            $q->andWhere('me.status =?', $status);
+        }        
+            
+
+        if($hash)
+        {
+            $q->addWhere('m.hash =?', $hash);
+        }
+
+        return $q->fetchArray();
     }
 }

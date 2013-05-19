@@ -12,4 +12,15 @@
  */
 class Mailing2Email extends BaseMailing2Email
 {
+	public function getPerson()
+	{
+		if($this->getName())
+		{
+			return $this->getName();
+		}
+		else
+		{
+			return $this->getEmail()->getEmail();
+		}
+	}
 }

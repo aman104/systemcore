@@ -40,7 +40,7 @@ class PaymentTable extends Doctrine_Table
 
 			$price = ($points * $p);
 			$price = round($price, 2);
-			
+			$price = $price * 100;
 
 			$price = str_replace('.', '', $price);
 			$price = str_replace(',', '', $price);

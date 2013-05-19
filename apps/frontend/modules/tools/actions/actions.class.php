@@ -152,4 +152,132 @@ class toolsActions extends sfActions
   	}
   }
 
+  public function executePreview(sfWebRequest $request)
+  {
+  	$hash = $request->getParameter('hash');
+  	$mailing = MailingTable::getInstance()->findOneByHash($hash);
+  	if($mailing)
+  	{
+  		$html = $mailing->getHtml();
+  		$html = $mailing->prepareHtml($html);
+  		echo $html;
+  		exit;
+  	}
+  }
+
+  public function executeDeleteEmail(sfWebRequest $request)
+  {
+
+  	$hash = $request->getParameter('hash');
+  	$mailing = MailingTable::getInstance()->findOneByHash($hash);
+  	$this->email = urlencode($request->getParameter('email'));
+  	$this->email = urldecode($this->email);
+
+  	$q = Doctrine_Query::create()
+  		->from('Email e')
+  		->where('e.email =?', $this->email);
+  
+  	$emailObj = $q->fetchOne();
+
+    if($emailObj)
+    {
+    	$this->ok = true;
+    	$q = Doctrine_Query::create()
+  		->from('Mailing2Email m2e')
+  		->where('m2e.mailing_id =?', $mailing->getPrimaryKey())
+  		->andWhere('m2e.email_id =?', $emailObj->getPrimaryKey());
+  		$m2e = $q->fetchOne();
+  		$m2e->setStatus(3);
+	  	$m2e->save();
+
+	  	$mailingList = $mailing->getMailingLists();
+	  	$ids = array();
+	  	foreach($mailingList as $list)
+	  	{
+	  		$ids[] = $list->getPrimaryKey();
+	  	}
+	  	$q = Doctrine_Query::create()
+	  		->from('MailingList2Email ml2e')
+	  		->WhereIn('ml2e.mailing_list_id', $ids)
+	  		->andWhere('ml2e.email_id =?', $emailObj->getPrimaryKey());
+	  	$ml2e = $q->execute();
+	  	foreach($ml2e as $one)
+		{
+			$one->delete();
+		}	  		
+
+    }  	
+    else
+    {
+    	$this->ok = false;
+    }
+
+  }
+
+  public function executeOpenEmail(sfWebRequest $request)
+  {
+
+  	$hash = $request->getParameter('hash');
+  	$mailing = MailingTable::getInstance()->findOneByHash($hash);
+  	$this->email = urlencode($request->getParameter('email'));
+  	$this->email = urldecode($this->email);
+
+
+  	$q = Doctrine_Query::create()
+  		->from('Email e')
+  		->where('e.email =?', $this->email);
+  
+  	$emailObj = $q->fetchOne();
+
+    if($emailObj)
+    {
+    	$q = Doctrine_Query::create()
+  		->from('Mailing2Email m2e')
+  		->where('m2e.mailing_id =?', $mailing->getPrimaryKey())
+  		->andWhere('m2e.email_id =?', $emailObj->getPrimaryKey());
+  		$m2e = $q->fetchOne();
+  		$m2e->setStatus(4);
+	  	$m2e->save();
+	}
+
+  	header( "Content-type: image/gif"); 
+	header( "Expires: Wed, 5 Feb 1986 06:06:06 GMT"); 
+	header( "Cache-Control: no-cache"); 
+	header( "Cache-Control: must-revalidate"); 
+
+	printf ('%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%', 71,73,70,56,57,97,1,0,1,0,128,255,0,192,192,192,0,0,0,33,249,4,1,0,0,0,0,44,0,0,0,0,1,0,1,0,0,2,2,68,1,0,59);
+  	exit;
+  }
+
+  public function executeMailingRun(sfWebRequest $request)
+  {
+  	header('Access-Control-Allow-Origin:  http://systemclient.sf.pl');
+  	$hash = $request->getParameter('hash');
+  	$mailing = MailingTable::getInstance()->findOneByHash($hash);
+  	$user = $mailing->getUser();
+  	$emails = MailingTable::getInstance()->getEmails($user, $hash, 2);
+  	echo count($emails);
+  	exit;
+  }
+
+  public function executePayment(sfWebRequest $request)
+  {
+  	$hash = $request->getParameter('hash');
+  	$payment = PaymentTable::getInstance()->findOneByHash($hash);
+
+  	if($payment)
+  	{
+  		$payment->setStatus(2);
+  		$payment->save();
+  		$data = $payment->getUser()->getUserData();
+  		$point = $data->getPoint() + $payment->getPoints();
+  		$data->setPoint($point);
+  		$data->save();
+  		//generate invoice
+  	}
+
+  	$this->redirect('http://systemclient.sf.pl/user/invoice');
+
+  }
+
 }

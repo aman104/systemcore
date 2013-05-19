@@ -23,4 +23,6 @@ class Email extends BaseEmail
 		return $q->fetchOne();
 	}
 
+
+
 }
