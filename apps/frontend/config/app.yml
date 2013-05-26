@@ -3,4 +3,4 @@
 
 # default values
 all:
-  global_host: http://api.send24mail.pl
+  global_host: http://api.sendmail24.pl

@@ -251,7 +251,7 @@ class toolsActions extends sfActions
 
   public function executeMailingRun(sfWebRequest $request)
   {
-  	header('Access-Control-Allow-Origin:  http://send24mail.pl');
+  	header('Access-Control-Allow-Origin:  http://sendmail24.pl');
   	$hash = $request->getParameter('hash');
   	$mailing = MailingTable::getInstance()->findOneByHash($hash);
   	$user = $mailing->getUser();
@@ -278,7 +278,7 @@ class toolsActions extends sfActions
 
   	}
 
-  	$this->redirect('http://send24mail.pl/user/invoice');
+  	$this->redirect('http://sendmail24.pl/user/invoice');
 
   }
 
