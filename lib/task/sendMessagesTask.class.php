@@ -33,7 +33,7 @@ EOF;
     $databaseManager = new sfDatabaseManager($this->configuration);
     $connection = $databaseManager->getDatabase($options['connection'])->getConnection();
 
-    $_SERVER['SERVER_NAME'] = 'systemcore.sf.pl';
+    $_SERVER['SERVER_NAME'] = 'sendmail24.pl';
 
     $mailings = MailingTable::getInstance()->findBy('status', '2');
     foreach($mailings as $mailing)
