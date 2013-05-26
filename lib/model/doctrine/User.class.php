@@ -216,4 +216,35 @@ class User extends BaseUser
 		return $new;
 	}
 
+
+	public function generateInvoiceUser()
+    {
+        
+        $data = $this->getToWFirmaData();
+
+        $invoice = STG_WFirma_API::getInstance();
+        $response = $invoice->addContractor($data);
+
+        $response = json_decode($response, true);
+
+        $id = $response['contractors'][0]['contractor']['id'];
+        $this->setInvoiceId($id);
+        $this->save();
+        return $id;
+        
+    }
+
+    private function getToWFirmaData()
+    {
+        return array(
+            'name'    => $this->getFirstName() .' '. $this->getLastName(),
+            'nip'     => $this->getNip(),
+            'street'  => $this->getStreet(),
+            'zip'     => $this->getPostCode(),
+            'city'    => $this->getCity(),
+            'email'   => $this->getEmail(),
+            'country' => $this->getCountry(),
+        );
+    }
+
 }

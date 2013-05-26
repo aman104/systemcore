@@ -20,15 +20,8 @@ class debugActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    $user = UserTable::getInstance()->find(1);
-    $return1 = MailingTable::getInstance()->getMailingsArrayByUser($user, 3);
-    $return2 = MailingTable::getInstance()->getMailingsArrayByUser($user, 3);
-    $return3 = MailingTable::getInstance()->getMailingsArrayByUser($user, 3);
-
-    echo count($return1).'<br />';
-    echo count($return2).'<br />';
-    echo count($return3).'<br />';
-
+    $p = PaymentTable::getInstance()->find(26);
+    $p->generateInvoice();
 
     exit;
 

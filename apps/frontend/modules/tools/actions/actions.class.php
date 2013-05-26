@@ -251,7 +251,7 @@ class toolsActions extends sfActions
 
   public function executeMailingRun(sfWebRequest $request)
   {
-  	header('Access-Control-Allow-Origin:  http://systemclient.sf.pl');
+  	header('Access-Control-Allow-Origin:  http://send24mail.pl');
   	$hash = $request->getParameter('hash');
   	$mailing = MailingTable::getInstance()->findOneByHash($hash);
   	$user = $mailing->getUser();
@@ -273,11 +273,29 @@ class toolsActions extends sfActions
   		$point = $data->getPoint() + $payment->getPoints();
   		$data->setPoint($point);
   		$data->save();
-  		//generate invoice
+
+      $payment->generateInvoice();
+
   	}
 
-  	$this->redirect('http://systemclient.sf.pl/user/invoice');
+  	$this->redirect('http://send24mail.pl/user/invoice');
 
+  }
+
+  public function executeDownload(sfWebRequest $request)
+  {
+
+      $payment = $this->getRoute()->getObject();
+
+      ob_end_clean();
+      header('Content-type: application/octet-stream', true);
+      header('Content-Disposition: attachment; filename="invoice.pdf"');
+      header('Pragma: no-cache', true);
+
+      $invoice = STG_WFirma_API::getInstance();
+      $response = $invoice->downloadInvoice($payment->getInvoiceId());
+
+      return $this->renderText($response);
   }
 
 }

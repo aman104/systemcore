@@ -22,7 +22,20 @@ class paymentActions extends ApiActions
 
   public function SmGetExecute(sfWebRequest $request, User $user)
   {
-  	$return = $user->getPayment()->toArray();
+
+    $hash = $request->getParameter('hash');
+    $method = $request->getParameter('method');
+    
+    if(isset($method) && $method == 'download')
+    {        
+        $payment = PaymentTable::getInstance()->findOneByHash($hash);
+        $return = Tools::abs_url_for('download_invoice', $payment);
+    }
+    else
+    {
+        $return = $user->getPayment()->toArray();
+    }
+  	
   	return $return;
   }
 }

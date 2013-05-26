@@ -84,6 +84,23 @@ class Tools
             return 'http://'.self::getFQDN();
     }
 
+    static function getPrice($valueAsIs)
+    {
+
+      $value = ((double)$valueAsIs/100);
+      $stats = explode('.',$value);
+      if(isset($stats[1]))
+      {
+          $return = (strlen($stats[1])==1) ? $stats[0].'.'.$stats[1].'0' : $stats[0].'.'.$stats[1];
+      }
+      else
+      {
+          $return = $stats[0].'.00';
+      }
+
+      return $return;
+
+    }
 
 
 }

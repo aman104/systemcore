@@ -5141,3 +5141,160 @@ May 19 19:28:56 symfony [info] {sfWebDebugLogger} Factories 22.66 ms (1)
 May 19 19:28:56 symfony [info] {sfWebDebugLogger} Action "tools/payment" 250.84 ms (1)
 May 19 19:28:56 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.34 ms (6)
 May 19 19:28:56 symfony [info] {sfWebResponse} Send content (109 o)
+May 26 10:07:16 symfony [info] {sfPatternRouting} Match route "payment_done" (/payment/:hash) for /payment/6b0d9fb80b with parameters array (  'module' => 'tools',  'action' => 'payment',  'hash' => '6b0d9fb80b',)
+May 26 10:07:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 26 10:07:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 26 10:07:16 symfony [info] {toolsActions} Call "toolsActions->executePayment()"
+May 26 10:07:16 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 26 10:07:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.user_id AS p__user_id, p.hash AS p__hash, p.points AS p__points, p.price AS p__price, p.symbol AS p__symbol, p.status AS p__status, p.invoice_id AS p__invoice_id, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM payment p WHERE (p.hash = ?) LIMIT 1 - (6b0d9fb80b)
+May 26 10:07:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.api_token AS u__api_token, u.api_secret AS u__api_secret, u.first_name AS u__first_name, u.last_name AS u__last_name, u.email AS u__email, u.phone AS u__phone, u.street AS u__street, u.post_code AS u__post_code, u.city AS u__city, u.country AS u__country, u.is_company AS u__is_company, u.nip AS u__nip, u.status AS u__status, u.invoice_id AS u__invoice_id, u.created_at AS u__created_at, u.updated_at AS u__updated_at FROM user u WHERE (u.id = ?) - (1)
+May 26 10:07:16 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.user_id AS u__user_id, u.point AS u__point, u.verify AS u__verify, u.created_at AS u__created_at, u.updated_at AS u__updated_at FROM user_data u WHERE (u.user_id = ?) - (1)
+May 26 10:07:16 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE user_data SET point = ?, updated_at = ? WHERE id = ? - (5576, 2013-05-26 10:07:16, 1)
+May 26 10:07:16 symfony [err] {Doctrine_Record_UnknownPropertyException} Unknown method User::generateInvoiceUser
+May 26 10:07:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 26 10:07:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 26 10:07:16 symfony [info] {sfWebDebugLogger} Configuration 375.16 ms (8)
+May 26 10:07:16 symfony [info] {sfWebDebugLogger} Factories 296.26 ms (1)
+May 26 10:07:16 symfony [info] {sfWebDebugLogger} Action "tools/payment" 234.58 ms (1)
+May 26 10:07:16 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.31 ms (5)
+May 26 10:07:38 symfony [info] {sfPatternRouting} Match route "payment_done" (/payment/:hash) for /payment/6b0d9fb80b with parameters array (  'module' => 'tools',  'action' => 'payment',  'hash' => '6b0d9fb80b',)
+May 26 10:07:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 26 10:07:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 26 10:07:38 symfony [info] {toolsActions} Call "toolsActions->executePayment()"
+May 26 10:07:38 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 26 10:07:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.user_id AS p__user_id, p.hash AS p__hash, p.points AS p__points, p.price AS p__price, p.symbol AS p__symbol, p.status AS p__status, p.invoice_id AS p__invoice_id, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM payment p WHERE (p.hash = ?) LIMIT 1 - (6b0d9fb80b)
+May 26 10:07:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.api_token AS u__api_token, u.api_secret AS u__api_secret, u.first_name AS u__first_name, u.last_name AS u__last_name, u.email AS u__email, u.phone AS u__phone, u.street AS u__street, u.post_code AS u__post_code, u.city AS u__city, u.country AS u__country, u.is_company AS u__is_company, u.nip AS u__nip, u.status AS u__status, u.invoice_id AS u__invoice_id, u.created_at AS u__created_at, u.updated_at AS u__updated_at FROM user u WHERE (u.id = ?) - (1)
+May 26 10:07:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.user_id AS u__user_id, u.point AS u__point, u.verify AS u__verify, u.created_at AS u__created_at, u.updated_at AS u__updated_at FROM user_data u WHERE (u.user_id = ?) - (1)
+May 26 10:07:38 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE user_data SET point = ?, updated_at = ? WHERE id = ? - (7576, 2013-05-26 10:07:38, 1)
+May 26 10:07:38 symfony [err] {Doctrine_Record_UnknownPropertyException} Unknown record property / related component "guard_user" on "User"
+May 26 10:07:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 26 10:07:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 26 10:07:38 symfony [info] {sfWebDebugLogger} Configuration 0.57 ms (8)
+May 26 10:07:38 symfony [info] {sfWebDebugLogger} Factories 23.62 ms (1)
+May 26 10:07:38 symfony [info] {sfWebDebugLogger} Action "tools/payment" 159.30 ms (1)
+May 26 10:07:38 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.37 ms (5)
+May 26 10:08:06 symfony [info] {sfPatternRouting} Match route "payment_done" (/payment/:hash) for /payment/6b0d9fb80b with parameters array (  'module' => 'tools',  'action' => 'payment',  'hash' => '6b0d9fb80b',)
+May 26 10:08:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 26 10:08:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 26 10:08:06 symfony [info] {toolsActions} Call "toolsActions->executePayment()"
+May 26 10:08:06 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 26 10:08:06 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.user_id AS p__user_id, p.hash AS p__hash, p.points AS p__points, p.price AS p__price, p.symbol AS p__symbol, p.status AS p__status, p.invoice_id AS p__invoice_id, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM payment p WHERE (p.hash = ?) LIMIT 1 - (6b0d9fb80b)
+May 26 10:08:06 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.api_token AS u__api_token, u.api_secret AS u__api_secret, u.first_name AS u__first_name, u.last_name AS u__last_name, u.email AS u__email, u.phone AS u__phone, u.street AS u__street, u.post_code AS u__post_code, u.city AS u__city, u.country AS u__country, u.is_company AS u__is_company, u.nip AS u__nip, u.status AS u__status, u.invoice_id AS u__invoice_id, u.created_at AS u__created_at, u.updated_at AS u__updated_at FROM user u WHERE (u.id = ?) - (1)
+May 26 10:08:06 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.user_id AS u__user_id, u.point AS u__point, u.verify AS u__verify, u.created_at AS u__created_at, u.updated_at AS u__updated_at FROM user_data u WHERE (u.user_id = ?) - (1)
+May 26 10:08:06 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE user_data SET point = ?, updated_at = ? WHERE id = ? - (9576, 2013-05-26 10:08:06, 1)
+May 26 10:08:08 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE user SET invoice_id = ?, updated_at = ? WHERE id = ? - (1967961, 2013-05-26 10:08:08, 1)
+May 26 10:08:08 symfony [info] {sfFrontWebController} Redirect to "http://systemclient.sf.pl/user/invoice"
+May 26 10:08:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 26 10:08:08 symfony [info] {sfWebResponse} Send header "Location: http://systemclient.sf.pl/user/invoice"
+May 26 10:08:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 26 10:08:08 symfony [info] {sfWebDebugLogger} Configuration 0.58 ms (8)
+May 26 10:08:08 symfony [info] {sfWebDebugLogger} Factories 23.33 ms (1)
+May 26 10:08:08 symfony [info] {sfWebDebugLogger} Action "tools/payment" 1322.72 ms (1)
+May 26 10:08:08 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.75 ms (6)
+May 26 10:08:08 symfony [info] {sfWebResponse} Send content (109 o)
+May 26 10:10:48 symfony [info] {sfPatternRouting} Match route "debug" (/debug) for /debug with parameters array (  'module' => 'debug',  'action' => 'index',)
+May 26 10:10:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 26 10:10:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 26 10:10:48 symfony [info] {debugActions} Call "debugActions->executeIndex()"
+May 26 10:10:48 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 26 10:10:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.user_id AS p__user_id, p.hash AS p__hash, p.points AS p__points, p.price AS p__price, p.symbol AS p__symbol, p.status AS p__status, p.invoice_id AS p__invoice_id, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM payment p WHERE (p.id = ?) LIMIT 1 - (3)
+May 26 10:10:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.api_token AS u__api_token, u.api_secret AS u__api_secret, u.first_name AS u__first_name, u.last_name AS u__last_name, u.email AS u__email, u.phone AS u__phone, u.street AS u__street, u.post_code AS u__post_code, u.city AS u__city, u.country AS u__country, u.is_company AS u__is_company, u.nip AS u__nip, u.status AS u__status, u.invoice_id AS u__invoice_id, u.created_at AS u__created_at, u.updated_at AS u__updated_at FROM user u WHERE (u.id = ?) - (1)
+May 26 10:12:07 symfony [info] {sfPatternRouting} Match route "debug" (/debug) for /debug with parameters array (  'module' => 'debug',  'action' => 'index',)
+May 26 10:12:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 26 10:12:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 26 10:12:07 symfony [info] {debugActions} Call "debugActions->executeIndex()"
+May 26 10:12:07 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 26 10:12:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.user_id AS p__user_id, p.hash AS p__hash, p.points AS p__points, p.price AS p__price, p.symbol AS p__symbol, p.status AS p__status, p.invoice_id AS p__invoice_id, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM payment p WHERE (p.id = ?) LIMIT 1 - (3)
+May 26 10:12:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.api_token AS u__api_token, u.api_secret AS u__api_secret, u.first_name AS u__first_name, u.last_name AS u__last_name, u.email AS u__email, u.phone AS u__phone, u.street AS u__street, u.post_code AS u__post_code, u.city AS u__city, u.country AS u__country, u.is_company AS u__is_company, u.nip AS u__nip, u.status AS u__status, u.invoice_id AS u__invoice_id, u.created_at AS u__created_at, u.updated_at AS u__updated_at FROM user u WHERE (u.id = ?) - (1)
+May 26 10:12:07 symfony [err] {Doctrine_Record_UnknownPropertyException} Unknown record property / related component "invlice_id" on "User"
+May 26 10:12:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 26 10:12:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 26 10:12:07 symfony [info] {sfWebDebugLogger} Configuration 0.68 ms (8)
+May 26 10:12:07 symfony [info] {sfWebDebugLogger} Factories 23.61 ms (1)
+May 26 10:12:07 symfony [info] {sfWebDebugLogger} Action "debug/index" 73.85 ms (1)
+May 26 10:12:07 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.34 ms (3)
+May 26 10:12:23 symfony [info] {sfPatternRouting} Match route "debug" (/debug) for /debug with parameters array (  'module' => 'debug',  'action' => 'index',)
+May 26 10:12:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 26 10:12:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 26 10:12:23 symfony [info] {debugActions} Call "debugActions->executeIndex()"
+May 26 10:12:23 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 26 10:12:23 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.user_id AS p__user_id, p.hash AS p__hash, p.points AS p__points, p.price AS p__price, p.symbol AS p__symbol, p.status AS p__status, p.invoice_id AS p__invoice_id, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM payment p WHERE (p.id = ?) LIMIT 1 - (3)
+May 26 10:12:23 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.api_token AS u__api_token, u.api_secret AS u__api_secret, u.first_name AS u__first_name, u.last_name AS u__last_name, u.email AS u__email, u.phone AS u__phone, u.street AS u__street, u.post_code AS u__post_code, u.city AS u__city, u.country AS u__country, u.is_company AS u__is_company, u.nip AS u__nip, u.status AS u__status, u.invoice_id AS u__invoice_id, u.created_at AS u__created_at, u.updated_at AS u__updated_at FROM user u WHERE (u.id = ?) - (1)
+May 26 10:12:54 symfony [info] {sfPatternRouting} Match route "debug" (/debug) for /debug with parameters array (  'module' => 'debug',  'action' => 'index',)
+May 26 10:12:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 26 10:12:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 26 10:12:54 symfony [info] {debugActions} Call "debugActions->executeIndex()"
+May 26 10:12:54 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 26 10:12:55 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.user_id AS p__user_id, p.hash AS p__hash, p.points AS p__points, p.price AS p__price, p.symbol AS p__symbol, p.status AS p__status, p.invoice_id AS p__invoice_id, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM payment p WHERE (p.id = ?) LIMIT 1 - (3)
+May 26 10:12:55 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.api_token AS u__api_token, u.api_secret AS u__api_secret, u.first_name AS u__first_name, u.last_name AS u__last_name, u.email AS u__email, u.phone AS u__phone, u.street AS u__street, u.post_code AS u__post_code, u.city AS u__city, u.country AS u__country, u.is_company AS u__is_company, u.nip AS u__nip, u.status AS u__status, u.invoice_id AS u__invoice_id, u.created_at AS u__created_at, u.updated_at AS u__updated_at FROM user u WHERE (u.id = ?) - (1)
+May 26 10:15:44 symfony [info] {sfPatternRouting} Match route "payment_done" (/payment/:hash) for /payment/c8363cfe16 with parameters array (  'module' => 'tools',  'action' => 'payment',  'hash' => 'c8363cfe16',)
+May 26 10:15:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 26 10:15:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 26 10:15:44 symfony [info] {toolsActions} Call "toolsActions->executePayment()"
+May 26 10:15:44 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 26 10:15:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.user_id AS p__user_id, p.hash AS p__hash, p.points AS p__points, p.price AS p__price, p.symbol AS p__symbol, p.status AS p__status, p.invoice_id AS p__invoice_id, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM payment p WHERE (p.hash = ?) LIMIT 1 - (c8363cfe16)
+May 26 10:15:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.api_token AS u__api_token, u.api_secret AS u__api_secret, u.first_name AS u__first_name, u.last_name AS u__last_name, u.email AS u__email, u.phone AS u__phone, u.street AS u__street, u.post_code AS u__post_code, u.city AS u__city, u.country AS u__country, u.is_company AS u__is_company, u.nip AS u__nip, u.status AS u__status, u.invoice_id AS u__invoice_id, u.created_at AS u__created_at, u.updated_at AS u__updated_at FROM user u WHERE (u.id = ?) - (1)
+May 26 10:15:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.user_id AS u__user_id, u.point AS u__point, u.verify AS u__verify, u.created_at AS u__created_at, u.updated_at AS u__updated_at FROM user_data u WHERE (u.user_id = ?) - (1)
+May 26 10:15:44 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE user_data SET point = ?, updated_at = ? WHERE id = ? - (11576, 2013-05-26 10:15:44, 1)
+May 26 10:15:45 symfony [info] {sfFrontWebController} Redirect to "http://systemclient.sf.pl/user/invoice"
+May 26 10:15:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+May 26 10:15:45 symfony [info] {sfWebResponse} Send header "Location: http://systemclient.sf.pl/user/invoice"
+May 26 10:15:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 26 10:15:45 symfony [info] {sfWebDebugLogger} Configuration 0.57 ms (8)
+May 26 10:15:45 symfony [info] {sfWebDebugLogger} Factories 22.37 ms (1)
+May 26 10:15:45 symfony [info] {sfWebDebugLogger} Action "tools/payment" 1315.91 ms (1)
+May 26 10:15:45 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.13 ms (5)
+May 26 10:15:45 symfony [info] {sfWebResponse} Send content (109 o)
+May 26 10:20:20 symfony [info] {sfPatternRouting} Match route "debug" (/debug) for /debug with parameters array (  'module' => 'debug',  'action' => 'index',)
+May 26 10:20:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 26 10:20:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 26 10:20:20 symfony [info] {debugActions} Call "debugActions->executeIndex()"
+May 26 10:20:20 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 26 10:20:20 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.user_id AS p__user_id, p.hash AS p__hash, p.points AS p__points, p.price AS p__price, p.symbol AS p__symbol, p.status AS p__status, p.invoice_id AS p__invoice_id, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM payment p WHERE (p.id = ?) LIMIT 1 - (26)
+May 26 10:20:20 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.api_token AS u__api_token, u.api_secret AS u__api_secret, u.first_name AS u__first_name, u.last_name AS u__last_name, u.email AS u__email, u.phone AS u__phone, u.street AS u__street, u.post_code AS u__post_code, u.city AS u__city, u.country AS u__country, u.is_company AS u__is_company, u.nip AS u__nip, u.status AS u__status, u.invoice_id AS u__invoice_id, u.created_at AS u__created_at, u.updated_at AS u__updated_at FROM user u WHERE (u.id = ?) - (1)
+May 26 10:20:46 symfony [info] {sfPatternRouting} Match route "debug" (/debug) for /debug with parameters array (  'module' => 'debug',  'action' => 'index',)
+May 26 10:20:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 26 10:20:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 26 10:20:46 symfony [info] {debugActions} Call "debugActions->executeIndex()"
+May 26 10:20:47 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 26 10:20:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.user_id AS p__user_id, p.hash AS p__hash, p.points AS p__points, p.price AS p__price, p.symbol AS p__symbol, p.status AS p__status, p.invoice_id AS p__invoice_id, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM payment p WHERE (p.id = ?) LIMIT 1 - (26)
+May 26 10:20:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.api_token AS u__api_token, u.api_secret AS u__api_secret, u.first_name AS u__first_name, u.last_name AS u__last_name, u.email AS u__email, u.phone AS u__phone, u.street AS u__street, u.post_code AS u__post_code, u.city AS u__city, u.country AS u__country, u.is_company AS u__is_company, u.nip AS u__nip, u.status AS u__status, u.invoice_id AS u__invoice_id, u.created_at AS u__created_at, u.updated_at AS u__updated_at FROM user u WHERE (u.id = ?) - (1)
+May 26 10:20:58 symfony [info] {sfPatternRouting} Match route "debug" (/debug) for /debug with parameters array (  'module' => 'debug',  'action' => 'index',)
+May 26 10:20:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 26 10:20:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 26 10:20:58 symfony [info] {debugActions} Call "debugActions->executeIndex()"
+May 26 10:20:58 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 26 10:20:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.user_id AS p__user_id, p.hash AS p__hash, p.points AS p__points, p.price AS p__price, p.symbol AS p__symbol, p.status AS p__status, p.invoice_id AS p__invoice_id, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM payment p WHERE (p.id = ?) LIMIT 1 - (26)
+May 26 10:20:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.api_token AS u__api_token, u.api_secret AS u__api_secret, u.first_name AS u__first_name, u.last_name AS u__last_name, u.email AS u__email, u.phone AS u__phone, u.street AS u__street, u.post_code AS u__post_code, u.city AS u__city, u.country AS u__country, u.is_company AS u__is_company, u.nip AS u__nip, u.status AS u__status, u.invoice_id AS u__invoice_id, u.created_at AS u__created_at, u.updated_at AS u__updated_at FROM user u WHERE (u.id = ?) - (1)
+May 26 10:41:01 symfony [info] {sfPatternRouting} Match route "download_invoice" (/invoice/donwload/:hash) for /invoice/donwload/d07724ef1d with parameters array (  'module' => 'tools',  'action' => 'download',  'hash' => 'd07724ef1d',)
+May 26 10:41:01 symfony [info] {sfFrontWebController} Action "tools/download" does not exist
+May 26 10:41:01 symfony [err] {sfError404Exception} Action "tools/download" does not exist.
+May 26 10:41:01 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+May 26 10:41:01 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 26 10:41:01 symfony [info] {sfWebDebugLogger} Configuration 52.10 ms (5)
+May 26 10:41:01 symfony [info] {sfWebDebugLogger} Factories 53.88 ms (1)
+May 26 10:41:30 symfony [info] {sfPatternRouting} Match route "download_invoice" (/invoice/donwload/:hash) for /invoice/donwload/d07724ef1d with parameters array (  'module' => 'tools',  'action' => 'download',  'hash' => 'd07724ef1d',)
+May 26 10:41:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 26 10:41:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 26 10:41:30 symfony [info] {toolsActions} Call "toolsActions->executeDownload()"
+May 26 10:41:30 symfony [err] {sfRenderException} The template "downloadSuccess.php" does not exist or is unreadable in "".
+May 26 10:41:30 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 26 10:41:30 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 26 10:41:30 symfony [info] {sfWebDebugLogger} Configuration 11.28 ms (10)
+May 26 10:41:30 symfony [info] {sfWebDebugLogger} Factories 23.78 ms (1)
+May 26 10:41:30 symfony [info] {sfWebDebugLogger} Action "tools/download" 0.10 ms (1)
+May 26 10:41:30 symfony [info] {sfWebDebugLogger} View "Success" for "tools/download" 60.02 ms (1)
+May 26 10:44:19 symfony [info] {sfPatternRouting} Match route "download_invoice" (/invoice/donwload/:hash) for /invoice/donwload/d07724ef1d with parameters array (  'module' => 'tools',  'action' => 'download',  'hash' => 'd07724ef1d',)
+May 26 10:44:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 26 10:44:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 26 10:44:19 symfony [info] {toolsActions} Call "toolsActions->executeDownload()"
+May 26 10:44:19 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+May 26 10:44:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.user_id AS p__user_id, p.hash AS p__hash, p.points AS p__points, p.price AS p__price, p.symbol AS p__symbol, p.status AS p__status, p.invoice_id AS p__invoice_id, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM payment p WHERE (p.hash = ?) - (d07724ef1d)
+May 26 10:44:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 26 10:44:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 26 10:44:20 symfony [info] {sfWebDebugLogger} Configuration 0.55 ms (8)
+May 26 10:44:20 symfony [info] {sfWebDebugLogger} Factories 23.13 ms (1)
+May 26 10:44:20 symfony [info] {sfWebDebugLogger} Action "tools/download" 1475.87 ms (1)
+May 26 10:44:20 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.58 ms (2)
+May 26 10:44:20 symfony [info] {sfWebDebugLogger} View "None" for "tools/download" 0.01 ms (1)
+May 26 10:44:20 symfony [info] {sfWebResponse} Send content (44006 o)

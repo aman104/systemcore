@@ -1,6 +1,11 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
+download_invoice:
+  url: /invoice/donwload/:hash
+  class:   sfDoctrineRoute
+  options: { model: Payment, type: object}
+  param:   { module: tools, action: download }
 
 payment_done:
   url: /payment/:hash

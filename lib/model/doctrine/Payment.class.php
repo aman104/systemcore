@@ -20,4 +20,37 @@ class Payment extends BasePayment
 		}
 		return parent::save($conn);
 	}
+
+	public function generateInvoice()
+	{
+		$user = $this->getUser();
+		if( ! $user->getInvoiceId() )
+		{
+			$user->generateInvoiceUser();
+		}
+
+		$client_id = $user->getInvoiceId();
+		$invoice = STG_WFirma_API::getInstance();
+        $response = $invoice->addInvoice($client_id, $this);
+        $response = json_decode($response, true);
+
+        $invoice_id = $response['invoices'][0]['invoice']['id'];
+        if($invoice_id)
+        {
+            $this->setInvoiceId($invoice_id);
+            $this->save();
+        }
+
+
+	}
+
+	public function getRealPrice()
+	{
+		return Tools::getPrice($this->getPrice());
+	}
+
+	public function getNettoPrice()
+	{
+		return round(Tools::getPrice($this->getPrice()) / 1.23, 2);
+	}
 }
