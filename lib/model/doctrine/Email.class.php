@@ -23,6 +23,18 @@ class Email extends BaseEmail
 		return $q->fetchOne();
 	}
 
+	public function getPerson()
+	{
+		if($this->getName())
+		{
+			return $this->getName();
+		}
+		else
+		{
+			return $this->getEmail();
+		}
+	}
+
 
 
 }

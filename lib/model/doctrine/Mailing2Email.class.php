@@ -14,9 +14,9 @@ class Mailing2Email extends BaseMailing2Email
 {
 	public function getPerson()
 	{
-		if($this->getName())
+		if($this->getEmail()->getName())
 		{
-			return $this->getName();
+			return $this->getEmail()->getName();
 		}
 		else
 		{

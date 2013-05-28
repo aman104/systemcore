@@ -160,6 +160,7 @@ class toolsActions extends sfActions
   	{
   		$html = $mailing->getHtml();
   		$html = $mailing->prepareHtml($html);
+      $html = str_replace('{open_link}', '', $html);
   		echo $html;
   		exit;
   	}

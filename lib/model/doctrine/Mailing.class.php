@@ -129,7 +129,7 @@ class Mailing extends BaseMailing
 			$new->setLink($link);
 			$new->save();
 
-			$html = str_replace('href="'.$url.'"', 'href="http://systemcore.sf.pl/link/'.$link.'"', $html);
+			$html = str_replace('href="'.$url.'"', 'href="http://api.sendmail24.pl/link/'.$link.'"', $html);
 
 		}
 		return $html;
@@ -158,12 +158,12 @@ class Mailing extends BaseMailing
 
 	public function getPreviewLink()
 	{
-		return '<a href="'.Tools::getSiteNameUrl().'/preview/'.$this->getHash().'">kliknij tutaj</a>';
+		return '<a href="http://api.sendmail24.pl/preview/'.$this->getHash().'">kliknij tutaj</a>';
 	}
 
 	public function getDeleteLink($email)
 	{
-		return '<a href="'.Tools::getSiteNameUrl().'/delete/email/'.$this->getHash().'?email='.urlencode($email).'">kliknij tutaj</a>';
+		return '<a href="http://api.sendmail24.pl/delete/email/'.$this->getHash().'?email='.urlencode($email).'">kliknij tutaj</a>';
 	}
 
 	public function sendEmails()
@@ -179,7 +179,7 @@ class Mailing extends BaseMailing
 			$m2e[0]->setStatus(2)->save();
 			$html = str_replace('{delete_link}', $this->getDeleteLink($to), $baseHtml);
 			$html = str_replace('{open_link}', '<img src="'.$this->getOpenLink($to).'" style="width: 1px height: 1px; background: none;" />', $html);
-			//$html = str_replace('{person}', $m2e[0]->getPerson(), $html);
+			//$html = str_replace('{person}', $emailObj->getPerson(), $html);
 			Tools::sendEmail($to, $this->getTitle(), $html, $from, $this->getText());	
 		}
 
@@ -191,7 +191,7 @@ class Mailing extends BaseMailing
 
 	public function getOpenLink($email)
 	{
-		return Tools::getSiteNameUrl().'/open/'.$this->getHash().'?email='.urlencode($email);
+		return 'http://api.sendmail24.pl/open/'.$this->getHash().'?email='.urlencode($email);
 	}
 
 }

@@ -9,14 +9,14 @@ class Tools
 
 	static function sendEmail($to, $title, $content, $from = array('name' => 'SystemCore', 'email' => 'system@core.pl'), $text = false)
 	{
-        $text = new MimePart($text);
+        $text = new MimePart('');
         $text->type = "text/plain";
 
         $html = new MimePart($content);
         $html->type = "text/html";
 
         $body = new MimeMessage();
-        $body->setParts(array($text, $html));
+        $body->setParts(array($html));
 
         $mail = new Mail\Message();
         $mail->setBody($body);
